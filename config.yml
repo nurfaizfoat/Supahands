@@ -26,7 +26,7 @@ PATHS:
   # Paths to Sass libraries, which can then be loaded with @import
   sass:
     - "bower_components/foundation-sites/scss"
-    - "bower_components/motion-ui/src"
+    # - "bower_components/motion-ui/src"
   # Paths to JavaScript libraries, which are combined into one file
   javascript:
     # Libraries required by Foundation
@@ -38,9 +38,9 @@ PATHS:
     # Individual Foundation components
     # If you aren't using a component, just remove it from the list
     # - "bower_components/foundation-sites/js/foundation.abide.js"
-    # - "bower_components/foundation-sites/js/foundation.accordion.js"
-    # - "bower_components/foundation-sites/js/foundation.accordionMenu.js"
-    # - "bower_components/foundation-sites/js/foundation.drilldown.js"
+    - "bower_components/foundation-sites/js/foundation.accordion.js"
+    - "bower_components/foundation-sites/js/foundation.accordionMenu.js"
+    - "bower_components/foundation-sites/js/foundation.drilldown.js"
     - "bower_components/foundation-sites/js/foundation.dropdown.js"
     - "bower_components/foundation-sites/js/foundation.dropdownMenu.js"
     - "bower_components/foundation-sites/js/foundation.equalizer.js"
@@ -59,4 +59,7 @@ PATHS:
     - "bower_components/foundation-sites/js/foundation.zf.responsiveAccordionTabs.js"
     # Paths to your own project code are here
     - "src/assets/js/app.js"
-    - "src/assets/js/!(app).js"
+    # - "src/assets/js/!(app).js"
+  javascriptCustom:
+    - "src/assets/js/*.js"
+    - "!src/assets/js/app.js"
