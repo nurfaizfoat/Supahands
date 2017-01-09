@@ -1,0 +1,105 @@
+/* ****************************************
+Buttons UI
+**************************************** */
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px 0 rgba(99, 99, 99, 0.15);
+    font-family: "FuturaStd-Heavy";
+    font-size: 15px;
+    &.primary {
+        position: relative;
+        width: 200px;
+        height: 45px;
+        color: #FFFFFF !important;
+        border: 2px solid transparent;
+        box-shadow: inset 0 -4px 0 0 #86B882;
+        background-color: #96CD91;
+        background-clip: padding-box;
+        padding: 2px;
+    }
+    &.primary::after {
+        position: absolute;
+        top: -2px;
+        bottom: -2px;
+        left: -2px;
+        right: -2px;
+        background: linear-gradient(#ACE2A7, #86B882);
+        border-radius: 4px;
+        content: '';
+        z-index: -1;
+    }
+    &.secondary {
+        width: 200px;
+        height: 45px;
+    }
+}
+
+
+/* Change Secondary Button Color */
+
+@mixin btn-color($colorHEX) {
+    color: rgba($colorHEX, 1);
+    border: 2px solid rgba($colorHEX, 1);
+    box-shadow: inset 0 -4px 0 0 rgba($colorHEX, 0.25);
+    transition: all .1s ease;
+    &:hover {
+        color: $colorHEX;
+        background-color: lighten($colorHEX, 20%);
+    }
+}
+
+
+/* ****************************************
+Section Titles
+**************************************** */
+
+.section-title {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    .section-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: #E99696;
+        svg {
+            width: 28px;
+            height: 28px;
+        }
+    }
+    .section-line {
+        margin: 10px 0;
+        width: 45px;
+        height: 1px;
+        background-color: $dark-purple;
+    }
+}
+
+.section-title.invert {
+    color: $white;
+    .section-line {
+        background-color: $white;
+    }
+}
+
+
+/* ****************************************
+Card
+**************************************** */
+
+.card {
+    background: #FFFFFF;
+    box-shadow: 4px 4px 12px 0 rgba(0, 0, 0, 0.10);
+    border-radius: 5px 5px 5px 5px;
+}
