@@ -1,6 +1,9 @@
 /* ****************************************
-Navbar
+Global Navbar & Footer
 **************************************** */
+
+
+/***** Navbar  *****/
 
 nav {
     color: #ffffff;
@@ -9,9 +12,7 @@ nav {
     }
 }
 
-
-/* Small Navigation */
-
+// [ Small ]
 .logo-mobile {
     float: left;
     padding: .5rem 0;
@@ -48,9 +49,7 @@ nav {
     }
 }
 
-
-/* Small Up Navigation */
-
+// [ Small Up ]
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
     .nav-wrapper {
         padding: 1em .5em !important;
@@ -68,9 +67,7 @@ nav {
     }
 }
 
-
-/* Medium Up Navigation */
-
+// [ Medium Up ]
 @media screen and (min-width: 40em) {
     .top-bar,
     .menu {
@@ -105,13 +102,9 @@ nav {
 }
 
 
-/* ****************************************
-Footer
-**************************************** */
+/***** Footer  *****/
 
-
-/* Medium Up Footer */
-
+// [ Medium Up ]
 footer {
     padding: 60px 0;
     background-color: $dark-gray;
@@ -126,9 +119,7 @@ footer {
     }
 }
 
-
-/* Small Up Footer */
-
+// [ Small Up ]
 @media screen and (max-width: 39.9375em) {
     footer {
         padding: 20px 20px;

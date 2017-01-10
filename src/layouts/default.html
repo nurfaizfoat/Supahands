@@ -1,23 +1,34 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Supahands</title>
-  <link rel="stylesheet" href="{{root}}assets/css/{{page}}.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>{{title}}</title>
+  <meta name=”description” content="{{description}}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon" href="#">
+  <!-- OpenGraph -->
+  <meta property="og:site_name" content="Supahands" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{ogTitle}}" />
+  <meta property="og:description" content="{{ogDescription}}" />
+  <meta property="og:image" content="" />
+
+  <link rel="stylesheet" href="{{root}}assets/css/stylesheet.css">
+  <!--[if lt IE 9]>
+      <script src="//d26a57ydsghvgx.cloudfront.net/www/public/assets/js/css3-mediaqueries.js"></script>
+    <![endif]-->
 </head>
 
 <body>
-
   {{> svg}}
   {{> navbar}}
   {{> body}}
   {{> footer}}
-  
+
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  <script src="{{root}}assets/js/app.js"></script>
-  <script type="text/javascript" src="{{root}}assets/js/{{page}}.js"></script>
+  <script src="{{root}}assets/js/main.js"></script>
 </body>
 
 </html>

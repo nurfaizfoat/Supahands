@@ -1,6 +1,9 @@
 /* ****************************************
-Buttons UI
+Global UI
 **************************************** */
+
+
+/***** Buttons  *****/
 
 .button {
     display: flex;
@@ -40,9 +43,7 @@ Buttons UI
     }
 }
 
-
-/* Change Secondary Button Color */
-
+// [ Change Secondary Button Color ]
 @mixin btn-color($colorHEX) {
     color: rgba($colorHEX, 1);
     border: 2px solid rgba($colorHEX, 1);
@@ -55,9 +56,7 @@ Buttons UI
 }
 
 
-/* ****************************************
-Section Titles
-**************************************** */
+/***** Section Title  *****/
 
 .section-title {
     display: flex;
@@ -94,9 +93,7 @@ Section Titles
 }
 
 
-/* ****************************************
-Card
-**************************************** */
+/***** Card  *****/
 
 .card {
     background: #FFFFFF;

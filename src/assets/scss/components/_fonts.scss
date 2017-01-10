@@ -1,6 +1,8 @@
 /* ****************************************
-Font Import
+Global Primary & Secondary Fonts
 **************************************** */
+
+// [ Font Import ]
 @font-face {
     font-family: FuturaStd-Heavy;
     src: url("../fonts/FuturaStd-Heavy.otf") format("opentype");
@@ -21,12 +23,14 @@ Font Import
     src: url("../fonts/AvenirLTStd-Roman.otf") format("opentype");
 }
 
-/* ****************************************
-Primary & Secondary Fonts
-**************************************** */
-
-/* Default Font Family */
-h1, h2, h3, h4, h5, h6, a {
+// [ Default Font Family ]
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
     font-family: "FuturaStd-Heavy";
 }
 
@@ -34,7 +38,7 @@ p {
     font-family: "AvenirLTStd-Roman";
 }
 
-/* Classes for Regular & Secondary Font */
+// [ Regular & Alternative Classes ]
 .regular {
     font-family: "FuturaStd-Book";
     font-weight: normal;

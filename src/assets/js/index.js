@@ -3,7 +3,6 @@ Plugins
 **************************************** */
 (function ($) {
     function drags(dragElement, resizeElement, container) {
-
         // Initialize the dragging event on mousedown.
         dragElement.on('mousedown touchstart', function (e) {
             dragElement.addClass('ba-draggable');

@@ -10,17 +10,11 @@
 
 
 /* ****************************************
-No JS
+Index
 **************************************** */
 
-.no-js {
-    opacity: 0;
-}
 
-
-/* ****************************************
-Header Background 
-**************************************** */
+/***** Gradient Background  *****/
 
 .header-bg-gradient {
     position: absolute;
@@ -45,9 +39,7 @@ Header Background
     }
 }
 
-
-/* ===== Mobile ===== */
-
+// [ Mobile ]
 @media screen and (max-width: 39.9375em) {
     .header-bg-gradient {
         top: -100px;
@@ -62,9 +54,7 @@ Header Background
 }
 
 
-/* ****************************************
-Header Section 
-**************************************** */
+/***** Header Section  *****/
 
 .header-section {
     height: 480px;
@@ -76,9 +66,7 @@ Header Section
     }
 }
 
-
-/* ===== Mobile ===== */
-
+// [ Mobile ]
 @media screen and (max-width: 39.9375em) {
     .header-section {
         height: auto;
@@ -92,9 +80,7 @@ Header Section
 }
 
 
-/* ****************************************
-USP Section
-**************************************** */
+/***** USP Section  *****/
 
 .usp-section {
     padding: 100px 0;
@@ -115,9 +101,7 @@ USP Section
     }
 }
 
-
-/* ===== Mobile ===== */
-
+// [ Mobile ]
 @media screen and (max-width: 39.9375em) {
     .usp-section {
         margin-top: 45%;
@@ -125,9 +109,7 @@ USP Section
 }
 
 
-/* ****************************************
-Middle Section
-**************************************** */
+/***** Middle Section  *****/
 
 .middle-section {
     position: relative;
@@ -152,9 +134,7 @@ Middle Section
     }
 }
 
-
-/* ===== Mobile ===== */
-
+// [ Mobile ]
 @media screen and (max-width: 39.9375em) {
     .middle-section {
         .mid-bg {
@@ -164,9 +144,7 @@ Middle Section
 }
 
 
-/* ****************************************
-Before After Section
-**************************************** */
+/***** Before After Section  *****/
 
 .before-after-section {
     color: $white;
@@ -174,9 +152,7 @@ Before After Section
     padding: 50px 0;
 }
 
-
-/* Before After */
-
+// [ Before After ]
 .ba-container {
     margin-top: 20px;
 }
@@ -234,9 +210,7 @@ Before After Section
     }
 }
 
-
-/* Switch Controller */
-
+// [ Switch Controller ]
 .switch-container {
     display: flex;
     flex-flow: row nowrap;
@@ -288,9 +262,7 @@ Before After Section
     text-align: left;
 }
 
-
-/* ===== Mobile ===== */
-
+// [ Mobile ]
 @media screen and (max-width: 39.9375em) {
     .before-after-section {
         color: $white;
@@ -304,9 +276,7 @@ Before After Section
 }
 
 
-/* ****************************************
-Expertise Section
-**************************************** */
+/***** Expertise Section  *****/
 
 .expertise-section {
     padding: 100px 0;
@@ -398,6 +368,7 @@ Expertise Section
     }
 }
 
+// [ Mobile ]
 @media screen and (max-width: 39.9375em) {
     .expertise-section {
         padding: 50px 10px 50px 10px;
@@ -441,9 +412,7 @@ Expertise Section
 }
 
 
-/* ****************************************
-Products Section
-**************************************** */
+/***** Products Section  *****/
 
 .products-section {
     margin-top: 60px;
@@ -569,6 +538,7 @@ Products Section
     }
 }
 
+// [ Mobile ]
 @media screen and (max-width: 39.9375em) {
     .products-section {
         margin-top: 40px;
@@ -627,9 +597,7 @@ Products Section
 }
 
 
-/* ****************************************
-Clients Section
-**************************************** */
+/***** Clients Section  *****/
 
 .clients-section {
     display: flex;
@@ -722,6 +690,7 @@ Clients Section
     }
 }
 
+// [ Mobile ]
 @media screen and (max-width: 39.9375em) {
     .clients-section {
         padding: 30px 0;
@@ -729,9 +698,7 @@ Clients Section
 }
 
 
-/* ****************************************
-CTA Section
-**************************************** */
+/***** CTA Section  *****/
 
 .cta-section {
     display: flex;
@@ -758,6 +725,7 @@ CTA Section
     }
 }
 
+// [ Mobile ]
 @media screen and (max-width: 39.9375em) {
     .cta-section {
         padding-top: 50px;

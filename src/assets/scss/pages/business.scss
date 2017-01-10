@@ -1,0 +1,120 @@
+@import '../components/fonts';
+@import '../components/ui';
+@import '../components/nav-footer';
+
+/* TEST CLASS, PLEASE DELETE! */
+
+.test {
+    border: 1px solid red;
+}
+
+
+/* ****************************************
+Business
+**************************************** */
+
+
+/***** Gradient Background  *****/
+
+.header-bg-gradient.business {
+    position: absolute;
+    top: 0;
+    min-height: 600px;
+    width: 100%;
+    background: url('/assets/img/gradient-background.png') no-repeat;
+    background-size: 100% 100%;
+    z-index: -2;
+    overflow-y: hidden;
+    .curves {
+        position: absolute;
+        bottom: 0;
+        fill: #ffffff;
+    }
+}
+
+
+/***** Header Section  *****/
+
+.header-section.business {
+    height: 350px;
+    color: #ffffff;
+    >.row {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+}
+
+// [ Mobile ]
+@media screen and (max-width: 39.9375em) {
+    .header-section.business {
+        height: auto;
+        padding-top: 50px;
+        text-align: center;
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+
+/***** Advantage Section  *****/
+
+.advantage-section {
+    padding: 50px;
+}
+
+
+/***** Case Studies Section  *****/
+
+.case-studies-section {
+    padding: 80px;
+    background-color: #FBFAFF;
+}
+
+
+/***** Project Flow Section  *****/
+
+.project-flow-section {
+    padding: 80px;
+}
+
+
+/***** CTA Section  *****/
+
+.cta-section {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    position: relative;
+    height: 400px;
+    color: #ffffff;
+}
+
+.footer-bg-gradient {
+    position: absolute;
+    bottom: 0;
+    min-height: 400px;
+    width: 100%;
+    background: url('/assets/img/gradient-background.png') no-repeat;
+    background-size: 100% 100%;
+    z-index: -1;
+    overflow-y: hidden;
+    .curves {
+        position: absolute;
+        top: 0;
+        fill: #ffffff;
+    }
+}
+
+// [ Mobile ]
+@media screen and (max-width: 39.9375em) {
+    .cta-section {
+        padding-top: 50px;
+        height: 250px;
+    }
+    .footer-bg-gradient {
+        min-height: 250px;
+    }
+}
