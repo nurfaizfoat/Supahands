@@ -30,7 +30,7 @@ function loadConfig() {
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
-  gulp.series(clean, gulp.parallel(pages, sass, javascript, javascriptCustom, images, copy)));
+  gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy)));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -84,21 +84,22 @@ function sass() {
     //.pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
     .pipe($.if(PRODUCTION, $.cssnano()))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
+
     .pipe(gulp.dest(PATHS.dist + '/assets/css'))
     .pipe(browser.reload({
       stream: true
     }));
 }
 
-// Combine Foundation JavaScript into one file
+// Combine JavaScript into one file
 // In production, the file is minified
-function javascriptCustom() {
+function javascript() {
   return gulp.src(PATHS.javascript)
     .pipe($.sourcemaps.init())
     .pipe($.babel({
       ignore: ['what-input.js']
     }))
-    .pipe($.concat('app.js'))
+    .pipe($.concat('main.js'))
     .pipe($.if(PRODUCTION, $.uglify()
       .on('error', e => {
         console.log(e);
@@ -108,17 +109,17 @@ function javascriptCustom() {
     .pipe(gulp.dest(PATHS.dist + '/assets/js'));
 }
 
-// Compile Custom JavaScript
-// In production, the file is minified
-function javascript() {
-  return gulp.src(PATHS.javascriptCustom)
-    .pipe($.if(PRODUCTION, $.uglify()
-      .on('error', e => {
-        console.log(e);
-      })
-    ))
-    .pipe(gulp.dest(PATHS.dist + '/assets/js'));
-}
+// // Compile Custom JavaScript
+// // In production, the file is minified
+// function javascript() {
+//   return gulp.src(PATHS.javascriptCustom)
+//     .pipe($.if(PRODUCTION, $.uglify()
+//       .on('error', e => {
+//         console.log(e);
+//       })
+//     ))
+//     .pipe(gulp.dest(PATHS.dist + '/assets/js'));
+// }
 
 // Copy images to the "dist" folder
 // In production, the images are compressed
@@ -151,6 +152,6 @@ function watch() {
   gulp.watch('src/pages/**/*.html').on('all', gulp.series(pages, browser.reload));
   gulp.watch('src/{layouts,partials}/**/*.html').on('all', gulp.series(resetPages, pages, browser.reload));
   gulp.watch('src/assets/scss/**/*.scss').on('all', gulp.series(sass, browser.reload));
-  gulp.watch('src/assets/js/**/*.js').on('all', gulp.series(javascript, javascriptCustom, browser.reload));
+  gulp.watch('src/assets/js/**/*.js').on('all', gulp.series(javascript, browser.reload));
   gulp.watch('src/assets/img/**/*').on('all', gulp.series(images, browser.reload));
 }
