@@ -116,20 +116,20 @@ $.fn.beforeAfter = function () {
 
 // Make as global function
 function tabbedContent(navElement, contentElement, customFunc) {
-    // Define on data change trigger
-    $(navElement).on('dataChange', function () {
+    // Define on dataChange functions
+    function dataChange() {
         // Change expertise content
         $(contentElement).removeAttr('data-active').hide();
         $(contentElement + ':nth-child(' + $(navElement + '[data-active]').attr('data-id') + ')').fadeIn(300).attr('data-active', '');
-        customFunc;
-    });
+        if (customFunc) { customFunc(); }
+    }
 
     /* Button */
     $(navElement).on('mousedown tap', function (e) {
         autoplayStop();
         $(navElement).removeAttr('data-active');
         $(this).attr('data-active', '');
-        $(this).trigger('dataChange');
+        dataChange();
     });
 
     /* Autoplay */
@@ -141,7 +141,6 @@ function tabbedContent(navElement, contentElement, customFunc) {
     }
 
     function autoplayStart() {
-        clearInterval(autoplay);
         autoplay = setInterval(function () {
             autoplayFunc()
         }, 6000);
@@ -154,13 +153,11 @@ function tabbedContent(navElement, contentElement, customFunc) {
         // If exceeds length, loop back to 1
         if (nextID > $(navElement).length) {
             $(navElement + '[data-id="1"]').attr('data-active', '');
-            $(navElement).trigger('dataChange');
         } else {
             $(navElement + '[data-id="' + nextID + '"]').attr('data-active', '');
-            $(navElement).trigger('dataChange');
         }
+        dataChange();
     }
-
     autoplayStart();
 }
 
@@ -201,7 +198,9 @@ $('#prev').on('mousedown tap', function (e) {
 
 $(function () {
     if ($('body').is('.index-page')) {
+        // Before & After
         $('.ba-slider').beforeAfter();
+        // Tabbed content & autoplay
         tabbedContent('.expertise-nav', '.content');
     }
 });

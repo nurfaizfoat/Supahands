@@ -26,7 +26,7 @@ Business
     }
     .icon {
         margin-top: 50px;
-        height: 250px;
+        width: 300px;
     }
 }
 
@@ -89,15 +89,29 @@ Business
 }
 
 
+/***** Middle Section  *****/
+
+.business-page .mid-bg {
+    height: 61%;
+    margin-top: 700px;
+    z-index: 0;
+    .upper-curve {
+        fill: #FBFAFF;
+    }
+}
+
+
 /***** Case Studies Section  *****/
 
 .case-studies-section {
-    padding: 50px 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     background-color: #FBFAFF;
     .card {
         position: relative;
         margin-top: 50px;
         overflow: visible;
+        z-index: 1;
     }
     .title-container {
         position: absolute;
@@ -120,7 +134,20 @@ Business
             margin: 0px;
         }
     }
+    .graphic-container {
+        position: absolute;
+        top: 25%;
+        right: -120px;
+        width: 300px;
+    }
+    .graphic {
+        display: none;
+        &[data-active] {
+            display: block;
+        }
+    }
     .task-types {
+        position: relative;
         padding: 30px;
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
@@ -138,10 +165,20 @@ Business
             opacity: 1;
             transition: opacity .5s ease;
         }
+        .caret {
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            top: 30px;
+            right: 0px;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-right: 10px solid #FFFFFF;
+        }
     }
     .case-container {
         padding: 40px;
-        height: 520px;
+        height: 605px;
     }
     .case {
         width: 80%;
@@ -153,30 +190,190 @@ Business
     .case[data-active] {
         display: block;
     }
+    .button-container {
+        position: absolute;
+        right: 25px;
+        bottom: -25px;
+    }
+}
+
+
+/***** Brands Section  *****/
+
+.brands-section {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    .title {
+        color: #B1B3DB;
+    }
+    svg {
+        fill: #ffffff;
+        opacity: 1;
+    }
 }
 
 
 /***** Project Flow Section  *****/
 
-.project-flow-section {
+.projectflow-section {
+    position: relative;
     padding: 80px;
+    background-color: #ffffff;
+    box-shadow: 4px 4px 12px 5px rgba(0, 0, 0, 0.15);
+}
+
+.flowcarousel-container {
+    position: relative;
+    padding: 40px 0px;
+    .orbit-container {
+        background: url('../img/flow-bg.png') no-repeat center;
+        background-size: contain;
+    }
+    .orbit-previous,
+    .orbit-next {
+        cursor: pointer;
+        svg {
+            width: 20px;
+            height: 30px;
+            fill: #D8D8D8;
+        }
+    }
+}
+
+.orbit-previous:active,
+.orbit-previous:focus,
+.orbit-previous:hover,
+.orbit-previous:visited,
+.orbit-next:active,
+.orbit-next:focus,
+.orbit-next:hover,
+.orbit-next:visited,{
+    background-color: transparent;
+}
+
+.projectflow-section .text-container {
+    margin-top: 50px;
+    .description {
+        display: none;
+    }
+    .description[data-active] {
+        display: block;
+    }
+    h4 {
+        display: inline-block;
+        padding: 5px 30px;
+        border-radius: 20px;
+        background-color: #68689F;
+    }
+}
+
+.flowline-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .base {
+        position: relative;
+        img {
+            width: 100%;
+        }
+    }
+    .fill {
+        display: flex;
+        position: absolute;
+        width: 3.8%;
+        height: 100%;
+        top: 0px;
+        overflow: hidden;
+        transition: width .8s ease;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: none;
+            object-position: top left;
+        }
+    }
 }
 
 
-/***** CTA Section  *****/
+/***** Testimonial Section  *****/
 
-.cta-section {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
+.business-page .clients-section {
+    background-color: #FBFAFF;
+}
+
+
+/***** Featured Section  *****/
+
+.featured-section {
+    background-color: #FBFAFF;
+    padding-bottom: 80px;
+    .featured-container {
+        display: flex;
+        align-items: center;
+        margin-top: -40px;
+    }
+    img {
+        width: 100%;
+        opacity: 0.5;
+    }
+}
+
+
+/***** Pricing Section  *****/
+
+.pricing-section {
     position: relative;
-    height: 400px;
-    color: #ffffff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    p {
+        margin: 0px;
+    }
+}
+
+.pricing-upper {
+    margin-top: 20px;
+    height: 300px;
+    padding-right: 45px;
+    background-color: #7777B8;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    overflow: visible;
+    .small-5 {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+    }
+    .graphic-container {
+        position: absolute;
+        bottom: 10px;
+        img {
+            object-fit: contain;
+        }
+    }
+}
+
+.pricing-lower {
+    padding: 45px;
+    margin-top: 8px;
+    background-color: #45476B;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    .button-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        a {
+            width: 90%;
+        }
+    }
 }
 
 .footer-bg-gradient {
     position: absolute;
     bottom: 0;
+    left: 0;
     min-height: 400px;
     width: 100%;
     background: url('../img/gradient-background.png') no-repeat;
