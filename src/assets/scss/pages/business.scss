@@ -1,0 +1,399 @@
+/* ****************************************
+Business
+**************************************** */
+
+
+/***** Gradient Background  *****/
+
+.business-page .header-bg-gradient {
+    min-height: 600px;
+}
+
+
+/***** Header Section  *****/
+
+.business-page .header-section {
+    height: 350px;
+    .text-container {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+    .icon-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .icon {
+        margin-top: 50px;
+        width: 300px;
+    }
+}
+
+// [ Mobile ]
+@media screen and (max-width: 39.9375em) {}
+
+
+/***** Advantage Section  *****/
+
+.advantage-section {
+    padding: 50px 0px;
+    >.row {
+        margin-top: 50px;
+    }
+    .venn-container {
+        display: flex;
+        justify-content: center;
+    }
+    .venn {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        .circle {
+            position: absolute;
+            width: 60%;
+            height: 60%;
+            border-radius: 50%;
+            mix-blend-mode: multiply;
+        }
+        .circle[data-circle="1"] {
+            left: 20%;
+            background-color: #76CCDB;
+        }
+        .circle[data-circle="2"] {
+            bottom: 0;
+            background-color: #E0C77F;
+        }
+        .circle[data-circle="3"] {
+            bottom: 0;
+            right: 0;
+            background-color: #EBC4C4;
+        }
+    }
+    .text-container {
+        .circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 15px;
+        }
+        .circle[data-circle="1"] {
+            background-color: #76CCDB;
+        }
+        .circle[data-circle="2"] {
+            background-color: #E0C77F;
+        }
+        .circle[data-circle="3"] {
+            background-color: #EBC4C4;
+        }
+    }
+}
+
+
+/***** Middle Section  *****/
+
+.business-page .mid-bg {
+    height: 61%;
+    margin-top: 700px;
+    z-index: 0;
+    .upper-curve {
+        fill: #FBFAFF;
+    }
+}
+
+
+/***** Case Studies Section  *****/
+
+.case-studies-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #FBFAFF;
+    .card {
+        position: relative;
+        margin-top: 50px;
+        overflow: visible;
+        z-index: 1;
+    }
+    .title-container {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        top: -20px;
+        left: 0px;
+        width: 100%;
+        z-index: 2;
+        .title {
+            margin: 0px;
+            padding: 10px;
+            width: 180px;
+            background-color: #DAF1FA;
+            color: #7AAFC3;
+            border-radius: 4px;
+            text-align: center;
+        }
+        h5 {
+            margin: 0px;
+        }
+    }
+    .graphic-container {
+        position: absolute;
+        top: 25%;
+        right: -120px;
+        width: 300px;
+    }
+    .graphic {
+        display: none;
+        &[data-active] {
+            display: block;
+        }
+    }
+    .task-types {
+        position: relative;
+        padding: 30px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        background-color: #44476B;
+        h5 {
+            color: #FFFFFF;
+            line-height: 24px;
+            opacity: 0.5;
+            cursor: pointer;
+        }
+        h5:hover {
+            opacity: 0.25;
+        }
+        h5[data-active] {
+            opacity: 1;
+            transition: opacity .5s ease;
+        }
+        .caret {
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            top: 30px;
+            right: 0px;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-right: 10px solid #FFFFFF;
+        }
+    }
+    .case-container {
+        padding: 40px;
+        height: 605px;
+    }
+    .case {
+        width: 80%;
+        display: none;
+        h5 {
+            margin-top: 25px;
+        }
+    }
+    .case[data-active] {
+        display: block;
+    }
+    .button-container {
+        position: absolute;
+        right: 25px;
+        bottom: -25px;
+    }
+}
+
+
+/***** Brands Section  *****/
+
+.brands-section {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    .title {
+        color: #B1B3DB;
+    }
+    svg {
+        fill: #ffffff;
+        opacity: 1;
+    }
+}
+
+
+/***** Project Flow Section  *****/
+
+.projectflow-section {
+    position: relative;
+    padding: 80px;
+    background-color: #ffffff;
+    box-shadow: 4px 4px 12px 5px rgba(0, 0, 0, 0.15);
+}
+
+.flowcarousel-container {
+    position: relative;
+    padding: 40px 0px;
+    .orbit-container {
+        background: url('../img/flow-bg.png') no-repeat center;
+        background-size: contain;
+    }
+    .orbit-previous,
+    .orbit-next {
+        cursor: pointer;
+        svg {
+            width: 20px;
+            height: 30px;
+            fill: #D8D8D8;
+        }
+    }
+}
+
+.orbit-previous:active,
+.orbit-previous:focus,
+.orbit-previous:hover,
+.orbit-previous:visited,
+.orbit-next:active,
+.orbit-next:focus,
+.orbit-next:hover,
+.orbit-next:visited,{
+    background-color: transparent;
+}
+
+.projectflow-section .text-container {
+    margin-top: 50px;
+    .description {
+        display: none;
+    }
+    .description[data-active] {
+        display: block;
+    }
+    h4 {
+        display: inline-block;
+        padding: 5px 30px;
+        border-radius: 20px;
+        background-color: #68689F;
+    }
+}
+
+.flowline-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .base {
+        position: relative;
+        img {
+            width: 100%;
+        }
+    }
+    .fill {
+        display: flex;
+        position: absolute;
+        width: 3.8%;
+        height: 100%;
+        top: 0px;
+        overflow: hidden;
+        transition: width .8s ease;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: none;
+            object-position: top left;
+        }
+    }
+}
+
+
+/***** Testimonial Section  *****/
+
+.business-page .clients-section {
+    background-color: #FBFAFF;
+}
+
+
+/***** Featured Section  *****/
+
+.featured-section {
+    background-color: #FBFAFF;
+    padding-bottom: 80px;
+    .featured-container {
+        display: flex;
+        align-items: center;
+        margin-top: -40px;
+    }
+    img {
+        width: 100%;
+        opacity: 0.5;
+    }
+}
+
+
+/***** Pricing Section  *****/
+
+.pricing-section {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    p {
+        margin: 0px;
+    }
+}
+
+.pricing-upper {
+    margin-top: 20px;
+    height: 300px;
+    padding-right: 45px;
+    background-color: #7777B8;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    overflow: visible;
+    .small-5 {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+    }
+    .graphic-container {
+        position: absolute;
+        bottom: 10px;
+        img {
+            object-fit: contain;
+        }
+    }
+}
+
+.pricing-lower {
+    padding: 45px;
+    margin-top: 8px;
+    background-color: #45476B;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    .button-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        a {
+            width: 90%;
+        }
+    }
+}
+
+.footer-bg-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-height: 400px;
+    width: 100%;
+    background: url('../img/gradient-background.png') no-repeat;
+    background-size: 100% 100%;
+    z-index: -1;
+    overflow-y: hidden;
+    .curves {
+        position: absolute;
+        top: 0;
+        fill: #ffffff;
+    }
+}
+
+// [ Mobile ]
+@media screen and (max-width: 39.9375em) {
+    .cta-section {
+        padding-top: 50px;
+        height: 250px;
+    }
+    .footer-bg-gradient {
+        min-height: 250px;
+    }
+}

@@ -6,28 +6,23 @@
 
 .test {
     border: 1px solid red;
+    z-index: 99;
 }
 
 
 /* ****************************************
-No JS
+Index
 **************************************** */
 
-.no-js {
-    opacity: 0;
-}
 
-
-/* ****************************************
-Header Background 
-**************************************** */
+/***** Gradient Background  *****/
 
 .header-bg-gradient {
     position: absolute;
     top: 0;
     min-height: 700px;
     width: 100%;
-    background: url('/assets/img/gradient-background.png') no-repeat;
+    background: url('../img/gradient-background.png') no-repeat;
     background-size: 100% 100%;
     z-index: -2;
     overflow-y: hidden;
@@ -45,9 +40,7 @@ Header Background
     }
 }
 
-
-/* ===== Mobile ===== */
-
+// [ Mobile ]
 @media screen and (max-width: 39.9375em) {
     .header-bg-gradient {
         top: -100px;
@@ -62,9 +55,7 @@ Header Background
 }
 
 
-/* ****************************************
-Header Section 
-**************************************** */
+/***** Header Section  *****/
 
 .header-section {
     height: 480px;
@@ -76,9 +67,7 @@ Header Section
     }
 }
 
-
-/* ===== Mobile ===== */
-
+// [ Mobile ]
 @media screen and (max-width: 39.9375em) {
     .header-section {
         height: auto;
@@ -92,12 +81,11 @@ Header Section
 }
 
 
-/* ****************************************
-USP Section
-**************************************** */
+/***** USP Section  *****/
 
 .usp-section {
-    padding: 100px 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .usp {
@@ -115,9 +103,7 @@ USP Section
     }
 }
 
-
-/* ===== Mobile ===== */
-
+// [ Mobile ]
 @media screen and (max-width: 39.9375em) {
     .usp-section {
         margin-top: 45%;
@@ -125,9 +111,7 @@ USP Section
 }
 
 
-/* ****************************************
-Middle Section
-**************************************** */
+/***** Middle Section  *****/
 
 .middle-section {
     position: relative;
@@ -135,9 +119,9 @@ Middle Section
 
 .mid-bg {
     position: absolute;
-    height: 90% !important;
+    height: 90%;
     width: 100%;
-    margin-top: -40px;
+    margin-top: -20px;
     background-color: #6A6BA5;
     z-index: -1;
     .curves {
@@ -152,9 +136,7 @@ Middle Section
     }
 }
 
-
-/* ===== Mobile ===== */
-
+// [ Mobile ]
 @media screen and (max-width: 39.9375em) {
     .middle-section {
         .mid-bg {
@@ -164,21 +146,73 @@ Middle Section
 }
 
 
-/* ****************************************
-Before After Section
-**************************************** */
+/***** Before After Section  *****/
 
 .before-after-section {
+    padding-top: 100px;
     color: $white;
     text-align: center;
-    padding: 50px 0;
 }
 
+// [ Switch Controller ]
+.switch-row {
+    padding-top: 10px;
+}
 
-/* Before After */
+.switch-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    .switch-base {
+        position: relative;
+        min-width: 60px;
+        height: 36px;
+        border-radius: 18px;
+        background-color: #f8f8f8;
+        box-shadow: inset 0 0 0 0px rgba(19, 191, 17, 1), 0 0 0 2px #dddddd;
+        cursor: pointer;
+    }
+    .switch-on {
+        box-shadow: inset 0 0 0 18px rgba(19, 191, 17, 1), 0 0 0 2px rgba(19, 191, 17, 1);
+        .switch {
+            left: 24px;
+            box-shadow: 0 0 0 2px transparent, 0 3px 3px rgba(0, 0, 0, .3);
+        }
+    }
+}
 
+.switch {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    width: 36px;
+    left: 0;
+    border-radius: 18px;
+    background-color: white;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, .2), 0 0 0 2px #dddddd;
+    transition: left .3s ease;
+    .icon-fist {
+        height: 65%;
+        width: 65%;
+        fill: #96CD92;
+    }
+}
+
+#switchtext-1 {
+    text-align: right;
+}
+
+#switchtext-2 {
+    text-align: left;
+}
+
+// [ Before After ]
 .ba-container {
-    margin-top: 20px;
+    padding-bottom: 100px;
 }
 
 .ba-slider {
@@ -234,68 +268,12 @@ Before After Section
     }
 }
 
-
-/* Switch Controller */
-
-.switch-container {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    .switch-base {
-        position: relative;
-        min-width: 60px;
-        height: 36px;
-        border-radius: 18px;
-        background-color: #f8f8f8;
-        box-shadow: inset 0 0 0 0px rgba(19, 191, 17, 1), 0 0 0 2px #dddddd;
-        cursor: pointer;
-    }
-    .switch-on {
-        box-shadow: inset 0 0 0 18px rgba(19, 191, 17, 1), 0 0 0 2px rgba(19, 191, 17, 1);
-        .switch {
-            left: 24px;
-            box-shadow: 0 0 0 2px transparent, 0 3px 3px rgba(0, 0, 0, .3);
-        }
-    }
-}
-
-.switch {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 36px;
-    width: 36px;
-    left: 0;
-    border-radius: 18px;
-    background-color: white;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, .2), 0 0 0 2px #dddddd;
-    transition: left .3s ease;
-    .icon-fist {
-        height: 65%;
-        width: 65%;
-        fill: #96CD92;
-    }
-}
-
-#switchtext-1 {
-    text-align: right;
-}
-
-#switchtext-2 {
-    text-align: left;
-}
-
-
-/* ===== Mobile ===== */
-
+// [ Mobile ]
 @media screen and (max-width: 39.9375em) {
     .before-after-section {
         color: $white;
         text-align: center;
-        padding: 20px 0;
+        padding: 20px 0px;
     }
     // Remove knob on mobile
     .handle:after {
@@ -304,12 +282,11 @@ Before After Section
 }
 
 
-/* ****************************************
-Expertise Section
-**************************************** */
+/***** Expertise Section  *****/
 
 .expertise-section {
-    padding: 100px 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
     .button.secondary {
         margin-top: 20px;
         @include btn-color(#8D8DC2);
@@ -325,9 +302,23 @@ Expertise Section
 }
 
 .expertise-bottom {
-    padding: 40px;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
+    position: relative;
+    padding: 20px;
+    margin-top: 3px;
+    z-index: 2;
+    .columns {
+        padding: 0;
+        border-right: 1px solid #E3E3E3;
+    }
+    .columns:last-child {
+        border: none;
+    }
+    h3,
+    p {
+        margin: 0;
+    }
 }
 
 .expertise-nav-container {
@@ -380,27 +371,11 @@ Expertise Section
     }
 }
 
-.expertise-bottom {
-    position: relative;
-    padding: 20px;
-    margin-top: 3px;
-    z-index: 2;
-    .columns {
-        padding: 0;
-        border-right: 1px solid #E3E3E3;
-    }
-    .columns:last-child {
-        border: none;
-    }
-    h3,
-    p {
-        margin: 0;
-    }
-}
-
+// [ Mobile ]
 @media screen and (max-width: 39.9375em) {
     .expertise-section {
-        padding: 50px 10px 50px 10px;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
     .expertise-top {
         padding-top: 60px;
@@ -441,13 +416,11 @@ Expertise Section
 }
 
 
-/* ****************************************
-Products Section
-**************************************** */
+/***** Products Section  *****/
 
 .products-section {
-    margin-top: 60px;
-    padding: 25px 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
     background-color: #FBFAFF;
 }
 
@@ -458,6 +431,7 @@ Products Section
     img {
         width: 150px;
         height: 150px;
+        opacity: 0.75;
     }
 }
 
@@ -505,7 +479,7 @@ Products Section
 }
 
 .business {
-    margin-top: 75px;
+    margin-top: 50px;
     .product-desc h3 {
         color: #E99696;
     }
@@ -539,7 +513,7 @@ Products Section
 }
 
 .entrepreneur {
-    margin-top: 75px;
+    margin-top: 50px;
     .product-desc h3 {
         color: #92C2FF;
     }
@@ -569,6 +543,7 @@ Products Section
     }
 }
 
+// [ Mobile ]
 @media screen and (max-width: 39.9375em) {
     .products-section {
         margin-top: 40px;
@@ -627,43 +602,47 @@ Products Section
 }
 
 
-/* ****************************************
-Clients Section
-**************************************** */
+/***** Clients Section  *****/
 
 .clients-section {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    padding: 80px 0;
+    padding: 100px 0;
     .row {
         position: relative;
     }
 }
 
 .testimonial-container {
+    position: relative;
     display: flex;
     flex-flow: row nowrap;
     overflow: hidden;
     padding: 10px 0;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .testimonial {
+    overflow: visible;
     .testimonial-photo {
-        width: 70px;
-        height: 70px;
-        border-radius: 35px;
+        position: absolute;
+        top: 2px;
+        width: 80px;
+        height: 80px;
+        border-radius: 40px;
+        border: 5px solid #ffffff;
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
         overflow: hidden;
-        margin-bottom: 20px;
     }
     .card {
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
-        height: 350px !important;
-        padding: 20px;
+        margin-top: 32px;
+        height: 285px !important;
+        padding: 60px 20px 20px 20px;
     }
     h3 {
         color: #68689F;
@@ -688,7 +667,7 @@ Clients Section
     position: absolute;
     width: 100%;
     height: 30px;
-    top: 42%;
+    top: 50%;
     z-index: 2;
     svg {
         width: 30px;
@@ -715,13 +694,17 @@ Clients Section
 }
 
 .brands-container {
-    width: 100%;
-    img {
-        width: 75%;
+    div {
+        height: 80px;
+    }
+    svg {
+        height: 100%;
+        width: 60%;
         opacity: 0.25;
     }
 }
 
+// [ Mobile ]
 @media screen and (max-width: 39.9375em) {
     .clients-section {
         padding: 30px 0;
@@ -729,15 +712,14 @@ Clients Section
 }
 
 
-/* ****************************************
-CTA Section
-**************************************** */
+/***** CTA Section  *****/
 
 .cta-section {
     display: flex;
     flex-flow: column nowrap;
     position: relative;
     justify-content: center;
+    padding: 0px 0px;
     height: 400px;
     color: #ffffff;
 }
@@ -747,7 +729,7 @@ CTA Section
     bottom: 0;
     min-height: 400px;
     width: 100%;
-    background: url('/assets/img/gradient-background.png') no-repeat;
+    background: url('../img/gradient-background.png') no-repeat;
     background-size: 100% 100%;
     z-index: -1;
     overflow-y: hidden;
@@ -758,6 +740,7 @@ CTA Section
     }
 }
 
+// [ Mobile ]
 @media screen and (max-width: 39.9375em) {
     .cta-section {
         padding-top: 50px;

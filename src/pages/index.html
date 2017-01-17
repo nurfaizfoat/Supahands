@@ -1,6 +1,12 @@
+---
+title: Supahands | Flexible and Scalable Outsourcing for Startups, SMEs and Corporations
+description: Offload business tasks or operational processes like lead generation, data management, content moderation and online support to grow your business quick.
+ogTitle: Supahands | Flexible and Scalable Outsourcing for Startups, SMEs and Corporations
+ogDescription: Offload business tasks or operational processes like lead generation, data management, content moderation and online support to grow your business quick.
+---
 <!-- Gradient Background -->
 <div class="header-bg-gradient">
-    <img class="hero-img" src="/assets/img/main-header-hero.png" />
+    <img class="hero-img" src="{{root}}assets/img/main-header-hero.png" />
     <svg class="curves" viewBox="0 0 2000 700">
         <path opacity=".4" d="M-500,300 C500,700 2000,600 2500,-80 L2500,750 L-500,750Z" />
     </svg>
@@ -16,15 +22,14 @@
     <div class="row">
         <div class="small-12 columns">
             <div class="row">
-                <div class="small-10 small-offset-1 medium-6">
+                <div class="small-12 medium-7 columns">
                     <h1>Supasmooth Outsourcing</h1>
-                    <p>Supahands is a virtual outsourcing platform for businesses and entrepreneurs. Powered by in-house technology
-                        and a large workforce of SupaAgents, we get work done faster with effective processes.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="small-10 small-offset-1 medium-6 button-container">
-                    <a href="#" class="button primary">Get Started Now</a>
+                    <p>Unlike traditional BPO companies, Supahands is a virtual outsourcing platform for businesses, who believe
+                        in scaling on demand. We provide flexible solutions and a tech-driven team of awesome SupaAgents;
+                        made better with in-house innovative cloud technology to produce optimum output.</p>
+                    <div class="button-container">
+                        <a href="#products-section" class="button primary">Get Started Now</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -34,28 +39,28 @@
 <section class="usp-section">
     <div class="row">
         <div class="small-6 medium-3 columns usp">
-            <img src="/assets/img/main-usp1.png" />
+            <img src="{{root}}assets/img/main-usp1.png" />
             <div class="usp-text">
                 <h3>Save Time</h3>
                 <p>Gain a competitive advantage by focusing on bigger things and handing over the tedious work to us.</p>
             </div>
         </div>
         <div class="small-6 medium-3 columns usp">
-            <img src="/assets/img/main-usp2.png" />
+            <img src="{{root}}assets/img/main-usp2.png" />
             <div class="usp-text">
                 <h3>Cost Efficient</h3>
                 <p>Only pay for the work that gets done. No hidden costs, no unpleasant surprises.</p>
             </div>
         </div>
         <div class="small-6 medium-3 columns usp">
-            <img src="/assets/img/main-usp3.png" />
+            <img src="{{root}}assets/img/main-usp3.png" />
             <div class="usp-text">
                 <h3>Flexible & Agile</h3>
                 <p>Plans are customised to your needs because we understand that every company is unique.</p>
             </div>
         </div>
         <div class="small-6 medium-3 columns usp">
-            <img src="/assets/img/main-usp4.png" />
+            <img src="{{root}}assets/img/main-usp4.png" />
             <div class="usp-text">
                 <h3>Quick to Scale</h3>
                 <p>Swiftly change the size of your project seamlessly with our tech-driven workforce.</p>
@@ -89,9 +94,26 @@
     <section class="before-after-section">
         <div class="row align-center">
             <div class="small-10 columns">
-                {{> sectiontitle iconID='fist' class-invert='invert' titletext='HOW WE CAN HELP'}}
+                {{> sectiontitle iconID='fist' invert='invert' titletext='HOW WE CAN HELP'}}
                 <p>Internal processes can be hectic and easily affected by external factors. By using Supahands’ outsourcing
                     service, you can save time, money and effort. This is how we do it.</p>
+            </div>
+        </div>
+        <div class="row align-center switch-row">
+            <div class="columns align-self-middle" id="switchtext-1">
+                <b>Without Supahands</b>
+            </div>
+            <div class="small-2 columns switch-container">
+                <div class="switch-base">
+                    <div class="switch">
+                        <svg class="icon-fist">
+                            <use xlink:href="#icon-fist" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="columns align-self-middle" id="switchtext-2">
+                <b>With Supahands</b>
             </div>
         </div>
         <div class="row align-center">
@@ -106,23 +128,6 @@
                     </div>
                     <span class="handle"></span>
                 </div>
-            </div>
-        </div>
-        <div class="row align-center">
-            <div class="columns align-self-middle" id="switchtext-1">
-                Without Supahands
-            </div>
-            <div class="small-2 columns switch-container">
-                <div class="switch-base">
-                    <div class="switch">
-                        <svg class="icon-fist">
-                            <use xlink:href="#icon-fist" />
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            <div class="columns align-self-middle" id="switchtext-2">
-                With Supahands
             </div>
         </div>
         <hr>
@@ -213,7 +218,7 @@
 </div>
 <!-- ///// Middle Section: END ///// -->
 <!-- Products Section -->
-<section class="products-section">
+<section class="products-section" id="products-section">
     <div class="row">
         <div class="small-12 columns">
             {{> sectiontitle iconID='coffee' titletext='PRODUCTS'}}
@@ -272,7 +277,7 @@
                         </div>
                         <img src="{{root}}assets/img/business-process.png" />
                     </div>
-                    <a class="button secondary" href="#">Read More</a>
+                    <a class="button secondary" href="/business.html">Read More</a>
                 </div>
             </div>
         </div>
@@ -405,22 +410,34 @@
     <hr>
     <div class="row text-center brands-container">
         <div class="small-4 medium-2 columns">
-            <img src="{{root}}assets/img/brand-kfit.png" />
+            <svg>
+                <use xlink:href="#logo-kfit" />
+            </svg>
         </div>
         <div class="small-4 medium-2 columns">
-            <img src="{{root}}assets/img/brand-deliveryhero.png" />
+            <svg>
+                <use xlink:href="#logo-deliveryhero" />
+            </svg>
         </div>
         <div class="small-4 medium-2 columns">
-            <img src="{{root}}assets/img/brand-uber.png" />
+            <svg>
+                <use xlink:href="#logo-uber" />
+            </svg>
         </div>
         <div class="small-4 medium-2 columns">
-            <img src="{{root}}assets/img/brand-servishero.png" />
+            <svg>
+                <use xlink:href="#logo-servishero" />
+            </svg>
         </div>
         <div class="small-4 medium-2 columns">
-            <img src="{{root}}assets/img/brand-99co.png" />
+            <svg>
+                <use xlink:href="#logo-99co" />
+            </svg>
         </div>
         <div class="small-4 medium-2 columns">
-            <img src="{{root}}assets/img/brand-500.png" />
+            <svg>
+                <use xlink:href="#logo-500" />
+            </svg>
         </div>
     </div>
 </section>
