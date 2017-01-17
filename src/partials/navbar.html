@@ -1,41 +1,41 @@
 <!-- Small Navigation -->
 <nav class="title-bar show-for-small-only" data-responsive-toggle="nav-menu">
-    <a class="logo-mobile" href="/"><img src="{{root}}assets/img/supahands-logo.svg" /></a>
+    <a class="logo-mobile" href="/">
+        <svg id="logo-mobile">
+            <use xlink:href="#logo" />
+        </svg>
+    </a>
     <button class="menu-icon" type="button" data-toggle></button>
 </nav>
 <!-- Medium-Up Navigation -->
-<nav class="no-js top-bar" id="nav-menu">
+<nav class="top-bar no-js" id="nav-menu">
     <div class="nav-wrapper">
-        <a class="logo hide-for-small-only" href="/" >
-            <img src="{{root}}assets/img/supahands-logo-invert.svg">
+        <a class="logo hide-for-small-only" href="/">
+            <svg id="logo">
+                <use xlink:href="#logo" />
+            </svg>
         </a>
-        <ul class="vertical medium-horizontal menu nav-links">
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Support</a></li>
-            <li><a href="#">Company</a></li>
-            <li><a href="#">Be A SupaAgent</a></li>
-            <li class="hide-for-small-only">|</li>
-            <li><a href="#">Get Started</a></li>
-        </ul>
-        <!--<ul class="menu vertical medium-horizontal nav-links" data-responsive-menu="accordion medium-dropdown">
+        <ul class="menu vertical medium-horizontal nav-links" data-responsive-menu="accordion medium-dropdown" data-closing-time="50" data-alignment="right">
             <li>
-                <a>Products</a>
+                <a>Products<svg class="hide-for-small-only dropdown-arrow"><use xlink:href="#icon-angle-down" /></svg></a>
                 <ul class="menu vertical" data-submenu>
+                    <div class="caret-up"></div>
                     <li><a href="#">Business</a></li>
                     <li><a href="#">Entrepreneur</a></li>
                 </ul>
             </li>
             <li>
-                <a>Support</a>
+                <a>Support<svg class="hide-for-small-only dropdown-arrow"><use xlink:href="#icon-angle-down" /></svg></a>
                 <ul class="menu vertical" data-submenu>
-                    <li><a href="#">One</a></li>
-                    <li><a href="#">Two</a></li>
-                    <li><a href="#">Three</a></li>
+                    <div class="caret-up"></div>
+                    <li><a href="#">How It Works</a></li>
+                    <li><a href="#">FAQ</a></li>
                 </ul>
             </li>
             <li>
-                <a href="#">Company</a>
+                <a href="#">Company<svg class="hide-for-small-only dropdown-arrow"><use xlink:href="#icon-angle-down" /></svg></a>
                 <ul class="menu vertical" data-submenu>
+                    <div class="caret-up"></div>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Team</a></li>
                     <li><a href="#">Careers</a></li>
@@ -43,7 +43,7 @@
             </li>
             <li><a href="#">Be A SupaAgent</a></li>
             <li class="hide-for-small-only">|</li>
-            <li><a href="#">Get Started</a></li>
-        </ul>-->
+            <li class="nav-cta"><a href="#">Get Started</a></li>
+        </ul>
     </div>
 </nav>
