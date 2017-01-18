@@ -121,7 +121,9 @@ function tabbedContent(navElement, contentElement, customFunc) {
         // Change expertise content
         $(contentElement).removeAttr('data-active').hide();
         $(contentElement + ':nth-child(' + $(navElement + '[data-active]').attr('data-id') + ')').fadeIn(300).attr('data-active', '');
-        if (customFunc) { customFunc(); }
+        if (customFunc) {
+            customFunc();
+        }
     }
 
     /* Button */
@@ -204,5 +206,4 @@ $(function () {
         tabbedContent('.expertise-nav', '.content');
     }
 });
-
 /***** Initialize on Load: END *****/

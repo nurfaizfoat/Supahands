@@ -20,18 +20,21 @@ Index
 .header-bg-gradient {
     position: absolute;
     top: 0;
-    min-height: 700px;
+    height: 750px;
     width: 100%;
     background: url('../img/gradient-background.png') no-repeat;
     background-size: 100% 100%;
     z-index: -2;
     overflow-y: hidden;
-    .hero-img {
-        position: absolute;
-        width: 20%;
-        top: 12%;
-        right: 20%;
-        z-index: -4;
+    .hero-img-container {
+        position: relative;
+        .hero-img {
+            position: relative;
+            right: -50px;
+            bottom: -100px;
+            width: 80%;
+            z-index: -4;
+        }
     }
     .curves {
         position: absolute;
@@ -43,14 +46,21 @@ Index
 // [ Mobile ]
 @media screen and (max-width: 39.9375em) {
     .header-bg-gradient {
-        top: -100px;
-    }
-    .hero-img {
         position: absolute;
-        display: block;
-        top: 70% !important;
-        width: 50% !important;
-        z-index: -4;
+        top: 0;
+        height: 38rem;
+        .row {
+            height: 100%;
+        }
+        .hero-img-container {
+            display: flex;
+            justify-content: center;
+            .hero-img {
+                bottom: -19rem;
+                right: 0;
+                object-fit: contain;
+            }
+        }
     }
 }
 
@@ -58,7 +68,7 @@ Index
 /***** Header Section  *****/
 
 .header-section {
-    height: 480px;
+    height: 34.5em;
     color: #ffffff;
     >.row {
         display: flex;
@@ -67,12 +77,22 @@ Index
     }
 }
 
+// [ Tablet ]
+@media screen and (max-width: 63.9375em) {
+    .header-section {
+        height: 600px;
+    }
+}
+
 // [ Mobile ]
 @media screen and (max-width: 39.9375em) {
     .header-section {
         height: auto;
-        padding-top: 50px;
+        padding: 3rem 0 13.5rem 0;
         text-align: center;
+        .columns>h1 {
+            white-space: nowrap;
+        }
         .button-container {
             display: flex;
             justify-content: center;
@@ -106,7 +126,7 @@ Index
 // [ Mobile ]
 @media screen and (max-width: 39.9375em) {
     .usp-section {
-        margin-top: 45%;
+        padding: 15% 0;
     }
 }
 
@@ -126,7 +146,7 @@ Index
     z-index: -1;
     .curves {
         position: absolute;
-        top: 0;
+        top: -1px;
         fill: #ffffff;
     }
     .curves2 {
@@ -149,7 +169,7 @@ Index
 /***** Before After Section  *****/
 
 .before-after-section {
-    padding-top: 100px;
+    padding: 100px 0px;
     color: $white;
     text-align: center;
 }
@@ -273,11 +293,22 @@ Index
     .before-after-section {
         color: $white;
         text-align: center;
-        padding: 20px 0px;
+        padding: 3rem 0;
     }
     // Remove knob on mobile
     .handle:after {
         display: none;
+    }
+    #switchtext-1,
+    #switchtext-2 {
+        text-align: center;
+        line-height: 15px;
+        span {
+            display: block;
+        }
+    }
+    .ba-container {
+        padding-bottom: 15%;
     }
 }
 
@@ -285,7 +316,6 @@ Index
 /***** Expertise Section  *****/
 
 .expertise-section {
-    padding-top: 100px;
     padding-bottom: 100px;
     .button.secondary {
         margin-top: 20px;
@@ -374,8 +404,7 @@ Index
 // [ Mobile ]
 @media screen and (max-width: 39.9375em) {
     .expertise-section {
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding: 10% 3%;
     }
     .expertise-top {
         padding-top: 60px;
@@ -436,7 +465,6 @@ Index
 }
 
 .product-desc {
-    min-height: 145px;
 }
 
 .product-usp {
@@ -464,9 +492,6 @@ Index
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    img {
-        max-height: 420px;
-    }
     h5 {
         margin: 25px 0;
     }
@@ -543,60 +568,29 @@ Index
     }
 }
 
-// [ Mobile ]
-@media screen and (max-width: 39.9375em) {
     .products-section {
-        margin-top: 40px;
     }
     .product-desc {
         margin-top: 30px;
-        min-height: 120px;
         text-align: center;
     }
-    .product-icon {
-        justify-content: center;
     }
-    .product-process h5 {
-        width: 100%;
-        font-size: 18px;
-    }
-    .business,
-    .entrepreneur {
-        margin-top: 50px;
     }
     .timeline-container {
-        width: 90%;
-        font-size: 12px;
     }
     .business {
         border-bottom: 1px solid #DFDFDF;
         .product-process {
             align-items: center;
-            padding: 30px 0px 0px 0px;
-            h5 {
-                margin-right: 0px;
-                text-align: center;
-            }
-        }
-        .timeline-container {
-            padding-right: 20px;
         }
         ul {
-            line-height: 24px;
         }
     }
     .entrepreneur {
         .product-process {
             align-items: center;
-            border-left: none;
-            padding: 30px 0px 0px 0px;
-            h5 {
-                margin-right: 0px;
-                text-align: center;
             }
         }
-        .timeline-container {
-            padding-left: 20px;
         }
     }
 }
