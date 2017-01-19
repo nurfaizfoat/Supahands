@@ -159,7 +159,9 @@ function watch() {
   gulp.watch(PATHS.assets, copy);
   gulp.watch('src/pages/**/*.html').on('all', gulp.series(pages, browser.reload));
   gulp.watch('src/{layouts,partials}/**/*.html').on('all', gulp.series(resetPages, pages, browser.reload));
-  gulp.watch('src/assets/scss/**/*.scss').on('all', gulp.series(sass, pluginSASS, browser.reload));
-  gulp.watch('src/assets/js/**/*.js').on('all', gulp.series(javascript, pluginJS, browser.reload));
+  gulp.watch('src/assets/scss/**/*.scss').on('all', gulp.series(sass, browser.reload));
+  gulp.watch('src/assets/scss/plugins/*.scss').on('all', gulp.series(pluginSASS, browser.reload));
+  gulp.watch('src/assets/js/**/*.js').on('all', gulp.series(javascript, browser.reload));
+  gulp.watch('src/assets/js/plugins/*.js').on('all', gulp.series(pluginJS, browser.reload));
   gulp.watch('src/assets/img/**/*').on('all', gulp.series(images, browser.reload));
 }
