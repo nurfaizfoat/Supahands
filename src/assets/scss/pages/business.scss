@@ -200,7 +200,7 @@ Business
 
 /***** Brands Section  *****/
 
-.brands-section {
+.business-page .brands-section {
     position: relative;
     padding-top: 20px;
     padding-bottom: 50px;
@@ -390,7 +390,7 @@ Business
 // [ Mobile ]
 @media screen and (max-width: 39.9375em) {
     .cta-section {
-        padding-top: 50px;
+        // padding-top: 50px;
         height: 250px;
     }
     .footer-bg-gradient {

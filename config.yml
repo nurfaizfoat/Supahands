@@ -60,6 +60,3 @@ PATHS:
     # Paths to your own project code are here
     - "src/assets/js/main.js"
     - "src/assets/js/!(main).js"
-  # javascriptCustom:
-  #   - "src/assets/js/*.js"
-  #   - "!src/assets/js/app.js"

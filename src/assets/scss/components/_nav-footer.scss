@@ -148,9 +148,9 @@ nav {
             margin-top: 5px;
             margin-bottom: 5px;
             color: #68689F;
-        }
-        a:hover {
-            background-color: #f3f3f3;
+            &:hover {
+                background-color: #f3f3f3;
+            }
         }
     }
 }
