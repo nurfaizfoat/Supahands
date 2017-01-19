@@ -391,12 +391,26 @@ Index
 }
 
 .expertise-content {
-    height: 160px;
+    height: 140px;
     margin-top: 15px;
     .content {
         display: none;
         &[data-active] {
             display: block;
+        }
+    }
+}
+
+// [ Tablet ]
+@media screen and (max-width: 63.9375em) {
+    .expertise-content {
+        height: 200px;
+        margin-top: 15px;
+        .content {
+            display: none;
+            &[data-active] {
+                display: flex;
+            }
         }
     }
 }
@@ -430,7 +444,7 @@ Index
         }
     }
     .expertise-content {
-        height: 320px;
+        height: 280px;
         margin-top: 15px;
         .content {
             display: none;
@@ -745,6 +759,9 @@ Index
         fill: #d8d8d8;
         z-index: 2;
         cursor: pointer;
+        &:hover {
+            fill: #75758F;
+        }
     }
     #prev-arrow {
         left: 0;
@@ -871,6 +888,7 @@ Index
         padding-bottom: 10%;
     }
 }
+
 
 /***** CTA Section  *****/
 

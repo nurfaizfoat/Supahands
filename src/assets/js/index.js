@@ -198,11 +198,13 @@ function testimonial() {
 /***** Equalize Height Function: START  *****/
 
 function equalizeHeight(elementName) {
-    var heights = $(elementName).map(function () {
-            return $(this).height();
-        }).get(),
-        maxHeight = Math.max.apply(null, heights);
-    $(elementName).height(maxHeight);
+    function resizeHeight() {
+        var heights = $(elementName).map(function () {
+                return $(this).height();
+            }).get(),
+            maxHeight = Math.max.apply(null, heights);
+        $(elementName).height(maxHeight);
+    }
 }
 
 /***** Equalize Height Function: END  *****/
