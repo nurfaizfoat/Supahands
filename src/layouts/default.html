@@ -8,6 +8,7 @@
   <title>{{title}}</title>
   <meta name=”description” content="{{description}}" />
   <link rel="apple-touch-icon" href="#">
+
   <!-- OpenGraph -->
   <meta property="og:site_name" content="Supahands" />
   <meta property="og:type" content="website" />
@@ -15,21 +16,23 @@
   <meta property="og:description" content="{{ogDescription}}" />
   <meta property="og:image" content="" />
 
+  <link rel="stylesheet" href="{{root}}assets/css/plugins/slick.css">
   <link rel="stylesheet" href="{{root}}assets/css/stylesheet.css">
+
   <!--[if lt IE 9]>
       <script src="//d26a57ydsghvgx.cloudfront.net/www/public/assets/js/css3-mediaqueries.js"></script>
     <![endif]-->
 </head>
 
 <body class="{{page}}-page">
-
   {{> svg}}
   {{> navbar}}
   {{> body}}
   {{> footer}}
-  
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  <script src="{{root}}assets/js/main.js"></script>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="{{root}}assets/js/plugins/slick.min.js"></script>
+<script src="{{root}}assets/js/main.js"></script>
 </body>
 
 </html>

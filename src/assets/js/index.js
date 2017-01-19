@@ -168,32 +168,44 @@ function tabbedContent(navElement, contentElement, customFunc) {
 
 /***** Testimonial: START  *****/
 
-var currCard = 0;
-// Scroll container to initial card width
-function slideCard() {
-    $('.testimonial-container').animate({
-        scrollLeft: currCard * $('.testimonial').outerWidth()
-    }, 500);
+function testimonial() {
+    $(".testimonial-container").slick({
+        slide: '.testimonial',
+        dots: false,
+        appendDots: '.dots-container',
+        arrows: true,
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        prevArrow: '<svg id="prev-arrow"><use xlink:href="#icon-angle-left" /></svg>',
+        nextArrow: '<svg id="next-arrow"><use xlink:href="#icon-angle-right" /></svg>',
+        responsive: [{
+            breakpoint: 800,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                arrows: false,
+                dots: true
+            }
+        }]
+    });
 }
 
-/* Control Buttons */
-$('#next').on('mousedown tap', function (e) {
-    currCard++;
-    if (currCard == $('.testimonial-container .card').length - 1) {
-        currCard = 0;
-    }
-    slideCard();
-});
-
-$('#prev').on('mousedown tap', function (e) {
-    currCard--;
-    if (currCard < 0) {
-        currCard = $('.testimonial-container .card').length - 2;
-    }
-    slideCard();
-});
-
 /***** Testimonial: END  *****/
+
+
+/***** Equalize Height Function: START  *****/
+
+function equalizeHeight(elementName) {
+    var heights = $(elementName).map(function () {
+            return $(this).height();
+        }).get(),
+        maxHeight = Math.max.apply(null, heights);
+    $(elementName).height(maxHeight);
+}
+
+/***** Equalize Height Function: END  *****/
 
 
 /***** Initialize on Load: START *****/
@@ -204,6 +216,9 @@ $(function () {
         $('.ba-slider').beforeAfter();
         // Tabbed content & autoplay
         tabbedContent('.expertise-nav', '.content');
+        // Testimonial slider
+        testimonial();
     }
 });
+
 /***** Initialize on Load: END *****/
