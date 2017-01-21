@@ -30,7 +30,7 @@ function loadConfig() {
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
-  gulp.series(clean, gulp.parallel(pages, sass, pluginSASS, javascript, pluginJS, images, copy)));
+  gulp.series(clean, gulp.parallel(pages, sass, pluginSASS, javascript, pluginJS, images, copy, boilerplate)));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -113,7 +113,7 @@ function javascript() {
 // Javascript
 function pluginJS() {
   return gulp.src('src/assets/js/plugins/*.js')
-  .pipe(gulp.dest(PATHS.dist + '/assets/js/plugins'));
+    .pipe(gulp.dest(PATHS.dist + '/assets/js/plugins'));
 }
 // Slick Sass
 function pluginSASS() {
@@ -137,6 +137,12 @@ function images() {
       progressive: true
     })))
     .pipe(gulp.dest(PATHS.dist + '/assets/img'));
+}
+
+// Copy boilerplate files to "dist"
+function boilerplate() {
+  return gulp.src('src/boilerplate/*')
+    .pipe(gulp.dest(PATHS.dist));
 }
 
 // Start a server with BrowserSync to preview the site in

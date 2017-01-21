@@ -348,6 +348,12 @@
           <path d="M130.5,149.8s2.6-2.4,6.6-5.8l6.9-5.8c2.6-2.1,5.3-4.3,8.2-6.4l8.3-6.3,3.7-3,3.2-2.8a17.7,17.7,0,0,0,4.2-4.9,11.1,11.1,0,0,0,1-2.5,6,6,0,0,0,.1-2.1,5.9,5.9,0,0,0-6.6-5.2,11.1,11.1,0,0,0-2.6.7,17.7,17.7,0,0,0-5.4,3.6l-3.2,2.9-3.4,3.3c-2.3,2.3-4.8,4.9-7.2,7.5s-4.9,5.1-7.3,7.4l-6.6,6.2c-3.9,3.6-6.6,5.9-6.6,5.9h-0.2A4.9,4.9,0,1,0,130.5,149.8Z"
           />
       </symbol>
+      <!-- Others -->
+      <symbol id="venn" viewBox="0 0 500 500">
+          <circle cx="250" cy="150" r="150" fill="#76CCDB" style="mix-blend-mode: multiply;" />
+          <circle cx="150" cy="350" r="150" fill="#EBC4C4" style="mix-blend-mode: multiply;" />
+          <circle cx="350" cy="350" r="150" fill="#E0C77F" style="mix-blend-mode: multiply;" />
+      </symbol>
   </svg>
   <!-- Small Navigation -->
   <nav class="title-bar show-for-small-only" data-responsive-toggle="nav-menu">
@@ -398,78 +404,71 @@
           </ul>
       </div>
   </nav>
-  <!-- Gradient Background -->
+  <!-- /// Header: START /// -->
+  <!-- Header Gradient Background -->
   <div class="header-bg-gradient">
-      <svg class="curves" viewBox="0 0 2000 700">
+      <section>
+          <div class="row">
+              <div class="small-12 large-3 large-offset-9 columns icon-container">
+                  <img class="icon" src="assets/img/product-business.png" />
+              </div>
+          </div>
+      </section>
+      <svg class="curves" viewBox="0 350 2000 200">
           <path opacity=".4" d="M-500,140 C930,950 1200,150 2500,420 L2500,750 L-500,750Z" />
       </svg>
-      <svg class="curves" viewBox="0 0 2000 700">
+      <svg class="curves" viewBox="0 350 2000 200">
           <path opacity=".4" d="M-500,160 C1000,970 900,100 2500,480 L2500,750 L-500,750Z" />
       </svg>
-      <svg class="curves" viewBox="0 0 2000 700">
+      <svg class="curves" viewBox="0 350 2000 200">
           <path d="M-500,220 C1000,940 1350,100 2500,500 L2500,750 L-500,750Z" />
       </svg>
   </div>
   <!-- Header Section -->
   <section class="header-section">
       <div class="row">
-          <div class="small-12 medium-7 columns text-container">
+          <div class="small-12 large-8 columns text-container">
               <h1>Built for Businesses</h1>
               <p>From startups to multinational corporations, Supahands helps drive your company’s growth with technology-driven
                   outsourcing and process automation. With no initial setup costs and an elastic workforce, adapt your projects
                   quickly according to your needs.</p>
               <div class="button-container">
-                  <a href="#" class="button primary">Contact Us Now</a>
+                  <a href="#" class="button primary">Contact Us</a>
               </div>
-          </div>
-          <div class="small-12 medium-3 medium-offset-2 icon-container">
-              <img class="icon" src="assets/img/product-business.png" />
           </div>
       </div>
   </section>
+  <!-- /// Header: END /// -->
   <!-- Advantage Section -->
   <section class="advantage-section">
-      <div class="small-12 column section-title ">
+      <div class="small-12 columns section-title ">
           <div class="section-icon"><svg id="#icon-lightning" style="fill: #ffffff"><use xlink:href="#icon-lightning" /></div>
           <div class="section-line"></div>
           <h6>WHY WE&#x27;RE DIFFERENT</h6>
       </div>
       <div class="row">
-          <div class="medium-5 medium-offset-1 columns venn-container">
-              <div class="venn">
-                  <div class="circle" data-circle="1"></div>
-                  <div class="circle" data-circle="2"></div>
-                  <div class="circle" data-circle="3"></div>
-              </div>
+          <div class="small-12 large-5 large-offset-1 columns venn-container">
+              <svg class="venn">
+                  <use xlink:href="#venn" />
+              </svg>
           </div>
-          <div class="medium-5 columns text-container">
-              <div class="row">
-                  <div class="medium-1 columns">
-                      <div class="circle" data-circle="1"></div>
-                  </div>
-                  <div class="medium-11 columns">
-                      <h4>Flexible</h4>
+          <div class="small-12 large-5 columns">
+              <div class="description-container">
+                  <div class="description">
+                      <h4>
+                          <div class="circle" id="circle-1"></div>Flexible</h4>
                       <p>Pricing plans are adapted to suit our clients’ needs. Only pay for the time spent on getting your work
                           done and get more bang for your buck.</p>
                   </div>
-              </div>
-              <div class="row">
-                  <div class="medium-1 columns">
-                      <div class="circle" data-circle="2"></div>
-                  </div>
-                  <div class="medium-11 columns">
-                      <h4>Scalable</h4>
+                  <div class="description">
+                      <h4>
+                          <div class="circle" id="circle-2"></div>Scalable</h4>
                       <p>With our elastic workforce, project size can be changed almost instantaneously without affecting the
-                          quality of work while still maintaining deadlines.
-                      </p>
+                          quality of work while still maintaining deadlines.</p>
                   </div>
-              </div>
-              <div class="row">
-                  <div class="medium-1 columns">
-                      <div class="circle" data-circle="3"></div>
-                  </div>
-                  <div class="medium-11 columns">
-                      <h4>Tech-driven</h4>
+                  <div class="description">
+                      <h4>
+                          <div class="circle" id="circle-3"></div>Tech-driven</h4>
                       <p>Our technology enables us to make processes smoother and more efficient for you. We can do more tasks
                           in a short amount of time.</p>
                   </div>
@@ -477,8 +476,9 @@
           </div>
       </div>
   </section>
-  <!-- ///// Middle Section: START ///// -->
+  <!-- /// Middle: START /// -->
   <div class="middle-section">
+      <!-- Middle Gradient Background -->
       <div class="mid-bg">
           <svg class="curves" viewBox="0 0 2000 200">
               <path opacity=".4" d="M-500,270 C750,-285 1300,350 2500,-110 L2500,-200 L-500,-200Z" />
@@ -501,7 +501,7 @@
       </div>
       <!-- Case Studies Section -->
       <section class="case-studies-section">
-          <div class="small-12 column section-title ">
+          <div class="small-12 columns section-title ">
               <div class="section-icon"><svg id="#icon-magnifying" style="fill: #ffffff"><use xlink:href="#icon-magnifying" /></div>
               <div class="section-line"></div>
               <h6>CASE STUDIES</h6>
@@ -525,14 +525,14 @@
                       <div class="graphic"></div>
                   </div>
                   <div class="row">
-                      <div class="small-3 task-types">
+                      <div class="small-12 large-3 columns task-types">
                           <h5 class="nav" data-id="1" data-active>Lead Generation</h5>
                           <h5 class="nav" data-id="2">Data Management</h5>
                           <h5 class="nav" data-id="3">Online Support</h5>
                           <h5 class="nav" data-id="4">Content Moderation</h5>
                           <div class="caret"></div>
                       </div>
-                      <div class="small-8 case-container">
+                      <div class="small-12 large-8 columns case-container">
                           <div class="case" data-active>
                               <h5>What they do</h5>
                               <p>A global ride-sharing platform that matches riders with willing drivers.</p>
@@ -590,7 +590,7 @@
                       </div>
                   </div>
                   <div class="button-container">
-                      <a href="#" class="button primary">Contact Us Now</a>
+                      <a href="#" class="button primary">Contact Us</a>
                   </div>
               </div>
           </div>
@@ -602,7 +602,7 @@
                   <h5 class="title">Brands Powered by Supahands</h5>
               </div>
           </div>
-          <div class="row text-center brands-container">
+          <div class="row text-center brands-logo-container">
               <div class="small-4 medium-2 columns">
                   <svg>
                       <use xlink:href="#logo-kfit" />
@@ -638,240 +638,215 @@
       <!-- Project Flow Section -->
       <section class="projectflow-section">
           <div class="row">
-              <div class="small-12 columns">
-                  <div class="small-12 column section-title ">
-                      <div class="section-icon"><svg id="#icon-triangle" style="fill: #ffffff"><use xlink:href="#icon-triangle" /></div>
-                      <div class="section-line"></div>
-                      <h6>PROJECT FLOW</h6>
-                  </div>
-              </div>
-          </div>
-          <div class="row collapse">
-              <div class="small-12 columns text-center">
-                  <div class="flowcarousel-container">
-                      <div class="orbit" data-orbit data-auto-play="false">
-                          <ul class="orbit-container">
-                              <button class="orbit-previous">
-                                  <svg>
-                                      <use xlink:href="#icon-angle-left" />
-                                  </svg>
-                              </button>
-                              <button class="orbit-next">
-                                  <svg>
-                                      <use xlink:href="#icon-angle-right" />
-                                  </svg>
-                              </button>
-                              <li class="is-active orbit-slide">
-                                  <img src="assets/img/projectflow-1.png">
-                              </li>
-                              <li class="orbit-slide">
-                                  <img src="assets/img/projectflow-2.png">
-                              </li>
-                              <li class="orbit-slide">
-                                  <img src="assets/img/projectflow-3.png">
-                                  <li class="orbit-slide">
-                                      <img src="assets/img/projectflow-4.png">
-                                  </li>
-                                  <li class="orbit-slide">
-                                      <img src="assets/img/projectflow-5.png">
-                                  </li>
-                                  <li class="orbit-slide">
-                                      <img src="assets/img/projectflow-6.png">
-                                  </li>
-                                  <li class="orbit-slide">
-                                      <img src="assets/img/projectflow-7.png">
-                                  </li>
-                              </li>
-                          </ul>
-                      </div>
-                  </div>
+              <div class="small-12 columns section-title ">
+                  <div class="section-icon"><svg id="#icon-triangle" style="fill: #ffffff"><use xlink:href="#icon-triangle" /></div>
+                  <div class="section-line"></div>
+                  <h6>PROJECT FLOW</h6>
               </div>
           </div>
           <div class="row">
-              <div class="small-12 columns text-center text-container">
-                  <div class="description" data-active>
-                      <h4 class="text-white"> 1. Consult </h4>
+              <div class="small-12 columns pf-graphic-container">
+                  <div class="pf-graphic">
+                      <img src="assets/img/projectflow-1.png">
+                  </div>
+                  <div class="pf-graphic">
+                      <img src="assets/img/projectflow-2.png">
+                  </div>
+                  <div class="pf-graphic">
+                      <img src="assets/img/projectflow-3.png">
+                  </div>
+                  <div class="pf-graphic">
+                      <img src="assets/img/projectflow-4.png">
+                  </div>
+                  <div class="pf-graphic">
+                      <img src="assets/img/projectflow-5.png">
+                  </div>
+                  <div class="pf-graphic">
+                      <img src="assets/img/projectflow-6.png">
+                  </div>
+                  <div class="pf-graphic">
+                      <img src="assets/img/projectflow-7.png">
+                  </div>
+              </div>
+              <div class="small-12 columns dots-container pf-dots"></div>
+          </div>
+          <div class="row">
+              <div class="small-12 columns pf-desc-container">
+                  <div class="description">
+                      <h4>1. Consult </h4>
                       <p>Great relationships always start with great conversations. We’ll speak to you so we know your needs and
                           requirements.
                       </p>
                   </div>
                   <div class="description">
-                      <h4 class="text-white"> 2. Establish KPIs & SOPs </h4>
+                      <h4> 2. Establish KPIs & SOPs </h4>
                       <p>KPIs and SOPs are set and agreed upon by both yours and our teams. This is so we know exactly what we’re
                           doing to make your life easier!</p>
                   </div>
                   <div class="description">
-                      <h4 class="text-white"> 3. Delegate </h4>
+                      <h4> 3. Delegate </h4>
                       <p>Our Project Managers begin delegating your project to our pool of SupaAgents and get the manpower ready
                           for the launch.</p>
                   </div>
                   <div class="description">
-                      <h4 class="text-white"> 4. Launch </h4>
+                      <h4> 4. Launch </h4>
                       <p>The project launches and we get cracking on executing and meeting your goals.</p>
                   </div>
                   <div class="description">
-                      <h4 class="text-white"> 5. Monitor </h4>
+                      <h4> 5. Monitor </h4>
                       <p>To make sure that everything runs smoothly, Project Managers will monitor and perform quality checks
                           on all work produced by the SupaAgents.</p>
                   </div>
                   <div class="description">
-                      <h4 class="text-white"> 6. Deliver </h4>
+                      <h4> 6. Deliver </h4>
                       <p>The results of the work done on your project will be reported and delivered to you by our team and we
                           get ready to see a big smile on your face.</p>
                   </div>
                   <div class="description">
-                      <h4 class="text-white"> 7. Celebrate </h4>
+                      <h4> 7. Celebrate </h4>
                       <p>Do a celebration dance as you realise how much time you’ve saved yourself after seeing what we’ve achieved
                           together! (Dance steps not included)</p>
                   </div>
               </div>
           </div>
           <div class="row">
-              <div class="small-12 columns">
-                  <div class="flowline-container">
-                      <div class="base">
-                          <img src="assets/img/flow-timeline-base.png" />
-                          <div class="fill">
-                              <img src="assets/img/flow-timeline-fill.png" />
-                          </div>
+              <div class="small-10 small-offset-1 medium-8 medium-offset-2 large-6 large-offset-3 columns">
+                  <div class="pf-timeline">
+                      <img src="assets/img/projectflow-timeline-base.png" />
+                      <div class="fill">
+                          <img src="assets/img/projectflow-timeline-fill.png" />
                       </div>
                   </div>
               </div>
           </div>
       </section>
-      <!-- Testimonials Section -->
+      <!-- Testimonial Section -->
       <section class="clients-section">
           <div class="row">
-              <div class="small-12 columns">
-                  <div class="small-12 column section-title invert">
-                      <div class="section-icon"><svg id="#icon-people" style="fill: #ffffff"><use xlink:href="#icon-people" /></div>
-                      <div class="section-line"></div>
-                      <h6>TESTIMONIALS</h6>
-                  </div>
+              <div class="small-12 columns section-title invert">
+                  <div class="section-icon"><svg id="#icon-people" style="fill: #ffffff"><use xlink:href="#icon-people" /></div>
+                  <div class="section-line"></div>
+                  <h6>TESTIMONIAL</h6>
               </div>
           </div>
-          <div class="row">
-              <div class="testimonial-controller hide-for-small-only">
-                  <svg id="prev">
-                      <use xlink:href="#icon-angle-left" />
-                  </svg>
-                  <svg id="next">
-                      <use xlink:href="#icon-angle-right" />
-                  </svg>
-              </div>
-              <div class="small-12 columns">
-                  <div class="row testimonial-container">
-                      <div class="small-6 columns testimonial">
-                          <div class="card">
-                              <div class="testimonial-photo"><img src="assets/img/avatar-joelneoh.jpg" /></div>
-                              <h3>Joel Neoh</h3>
-                              <h4>KFit</h4>
-                              <hr>
-                              <p><i>“Supahands has been essential for the initial scaling of KFit's supply base. The team has been responsive, open to feedback and actively reach out to see how else they can help us. Their attention to detail and continuous need to improve has allowed us to build our partner base in 9 cities already. Thanks Team Supahands”</i></p>
-                          </div>
+          <div class="row collapse">
+              <div class="small-12 columns testimonial-container">
+                  <div class="testimonial">
+                      <div class="testimonial-photo"><img src="assets/img/avatar-joelneoh.jpg" /></div>
+                      <div class="card">
+                          <h3>Joel Neoh</h3>
+                          <h4>KFit</h4>
+                          <hr>
+                          <p><i>“Supahands has been essential for the initial scaling of KFit's supply base. The team has been responsive, open to feedback and actively reach out to see how else they can help us. Their attention to detail and continuous need to improve has allowed us to build our partner base in 9 cities already. Thanks Team Supahands”</i></p>
                       </div>
-                      <div class="small-6 columns testimonial">
-                          <div class="card">
-                              <div class="testimonial-photo"><img src="assets/img/avatar-teresatruda.jpg" /></div>
-                              <h3>Teresa Truda</h3>
-                              <h4>Chozun</h4>
-                              <hr>
-                              <p><i>“Supahands saves our lives, daily. They are Supa-human and always there to help with any tasks we give them, like admin assistance, data entry and just general business support. The team is friendly, approachable, reliable and work hard to make sure they exceed our expectations. Love working with these guys.”</i></p>
-                          </div>
+                  </div>
+                  <div class="testimonial">
+                      <div class="testimonial-photo"><img src="assets/img/avatar-teresatruda.jpg" /></div>
+                      <div class="card">
+                          <h3>Teresa Truda</h3>
+                          <h4>Chozun</h4>
+                          <hr>
+                          <p><i>“Supahands saves our lives, daily. They are Supa-human and always there to help with any tasks we give them, like admin assistance, data entry and just general business support. The team is friendly, approachable, reliable and work hard to make sure they exceed our expectations. Love working with these guys.”</i></p>
                       </div>
-                      <div class="small-6 columns testimonial">
-                          <div class="card">
-                              <div class="testimonial-photo"><img src="assets/img/avatar-karlloo.jpg" /></div>
-                              <h3>Karl Loo</h3>
-                              <h4>ServisHero</h4>
-                              <hr>
-                              <p><i>“Working with Supahands has been a great help to our team. Given our service's unique requirements, they've been not only been accommodative but extremely responsive and flexible with their resource planning. As a growing business, the ability to adapt to our changing needs is truly valuable to us.”</i></p>
-                          </div>
+                  </div>
+                  <div class="testimonial">
+                      <div class="testimonial-photo"><img src="assets/img/avatar-karlloo.jpg" /></div>
+                      <div class="card">
+                          <h3>Karl Loo</h3>
+                          <h4>ServisHero</h4>
+                          <hr>
+                          <p><i>“Working with Supahands has been a great help to our team. Given our service's unique requirements, they've been not only been accommodative but extremely responsive and flexible with their resource planning. As a growing business, the ability to adapt to our changing needs is truly valuable to us.”</i></p>
                       </div>
-                      <div class="small-6 columns testimonial">
-                          <div class="card">
-                              <div class="testimonial-photo"><img src="assets/img/avatar-troyerstling.jpg" /></div>
-                              <h3>Troy Erstling</h3>
-                              <h4>BrainGain</h4>
-                              <hr>
-                              <p><i>“I have worked with a lot of VA's in the past few years from US to India and Philippines, all with varying levels of quality. Supahands has been, by far, the best service I have used to date. They have excellent communication, always ask for clarification when needed, and are always willing to add new skill sets that they haven't tried before. I personally recommend Supahands with enthusiasm!”</i></p>
-                          </div>
+                  </div>
+                  <div class="testimonial">
+                      <div class="testimonial-photo"><img src="assets/img/avatar-troyerstling.jpg" /></div>
+                      <div class="card">
+                          <h3>Troy Erstling</h3>
+                          <h4>BrainGain</h4>
+                          <hr>
+                          <p><i>“I have worked with a lot of VA's in the past few years from US to India and Philippines, all with varying levels of quality. Supahands has been, by far, the best service I have used to date. They have excellent communication, always ask for clarification when needed, and are always willing to add new skill sets that they haven't tried before. I personally recommend Supahands with enthusiasm!”</i></p>
                       </div>
-                      <div class="small-6 columns testimonial">
-                          <div class="card">
-                              <div class="testimonial-photo"><img src="assets/img/avatar-jonathanoh.jpg" /></div>
-                              <h3>Jonathan Oh</h3>
-                              <h4>Freshcart Grocer</h4>
-                              <hr>
-                              <p><i>“Supahands saved us heaps of time and costs by completing time-consuming business tasks that we'd rather not do. The best thing about Supahands? It's the team and the project managers that always deliver above our expectations. They immerse themselves into our business process, allowing us to constantly look for ways to improve it together. It's been an awesome experience!”</i></p>
-                          </div>
+                  </div>
+                  <div class="testimonial">
+                      <div class="testimonial-photo"><img src="assets/img/avatar-jonathanoh.jpg" /></div>
+                      <div class="card">
+                          <h3>Jonathan Oh</h3>
+                          <h4>Freshcart Grocer</h4>
+                          <hr>
+                          <p><i>“Supahands saved us heaps of time and costs by completing time-consuming business tasks that we'd rather not do. The best thing about Supahands? It's the team and the project managers that always deliver above our expectations. They immerse themselves into our business process, allowing us to constantly look for ways to improve it together. It's been an awesome experience!”</i></p>
                       </div>
                   </div>
               </div>
           </div>
-      </section>
-      <!-- Featured Section -->
-      <section class="featured-section">
-          <div class="row text-center">
+          <div class="row align-center">
               <div class="small-12 columns">
-                  <h5>As Featured In</h5>
-              </div>
-          </div>
-          <div class="row text-center featured-container">
-              <div class="small-4 medium-2 columns">
-                  <img src="assets/img/featured-vulcanpost.png" />
-              </div>
-              <div class="small-4 medium-2 columns">
-                  <img src="assets/img/featured-thestar.png" />
-              </div>
-              <div class="small-4 medium-2 columns">
-                  <img src="assets/img/featured-techcrunch.png" />
-              </div>
-              <div class="small-4 medium-2 columns">
-                  <img src="assets/img/featured-focus.png" />
-              </div>
-              <div class="small-4 medium-2 columns">
-                  <img src="assets/img/featured-e27.png" />
-              </div>
-              <div class="small-4 medium-2 columns">
-                  <img src="assets/img/featured-astro.png" />
+                  <div class="dots-container testimonial-dots"></div>
               </div>
           </div>
       </section>
   </div>
+  <!-- /// Middle: END /// -->
+  <!-- Featured Section -->
+  <section class="featured-section">
+      <div class="row text-center">
+          <div class="small-12 columns">
+              <h5>As Featured In</h5>
+          </div>
+      </div>
+      <div class="row featured-container">
+          <div class="small-4 medium-2 columns">
+              <img src="assets/img/featured-vulcanpost.png" />
+          </div>
+          <div class="small-4 medium-2 columns">
+              <img src="assets/img/featured-thestar.png" />
+          </div>
+          <div class="small-4 medium-2 columns">
+              <img src="assets/img/featured-techcrunch.png" />
+          </div>
+          <div class="small-4 medium-2 columns">
+              <img src="assets/img/featured-focus.png" />
+          </div>
+          <div class="small-4 medium-2 columns">
+              <img src="assets/img/featured-e27.png" />
+          </div>
+          <div class="small-4 medium-2 columns">
+              <img src="assets/img/featured-astro.png" />
+          </div>
+      </div>
+  </section>
+  <!-- /// Bottom: START /// -->
   <!-- Pricing Section -->
   <section class="pricing-section">
-      <div class="row">
-          <div class="small-12 columns">
-              <div class="small-12 column section-title ">
-                  <div class="section-icon"><svg id="#icon-pricetag" style="fill: #ffffff"><use xlink:href="#icon-pricetag" /></div>
-                  <div class="section-line"></div>
-                  <h6>PRICING</h6>
+      <div class="row card pricing-card-top">
+          <div class="small-12 large-4 columns pricing-graphic">
+              <img src="assets/img/coffee-set.png" />
+          </div>
+          <div class="small-12 large-8 columns top-text">
+              <div class="row">
+                  <div class="small-12 columns section-title invert">
+                      <div class="section-icon"><svg id="#icon-pricetag" style="fill: #ffffff"><use xlink:href="#icon-pricetag" /></div>
+                      <div class="section-line"></div>
+                      <h6>PRICING</h6>
+                  </div>
+                  <div class="small-12 columns">
+                      <h3>From As Low As RM1,500</h3>
+                      <p>Our pricing packages are customised specifically for each business’ needs. Whether it’s 50 hours, 500
+                          hours or 10,000 hours of work, just leave it to us and consider it done. Not sure how many hours
+                          your work will require? Get in touch with us for a free consultation with a member of our team.</p>
+                  </div>
               </div>
           </div>
       </div>
-      <div class="row pricing-upper card align-middle">
-          <div class="small-5 columns">
-              <div class="graphic-container">
-                  <img src="assets/img/coffee-set.png" />
-              </div>
-          </div>
-          <div class="small-7 columns text-white">
-              <h3>From As Low As RM1,500</h3>
-              <p>Our pricing packages are customised specifically for each business’ needs. Whether it’s 50 hours, 500 hours or
-                  10,000 hours of work, just leave it to us and consider it done. Not sure how many hours your work will require?
-                  Get in touch with us for a free consultation with a member of our team.</p>
-          </div>
-      </div>
-      <div class="row pricing-lower card">
-          <div class="small-7 columns text-white">
+      <div class="row card pricing-card-bottom">
+          <div class="small-12 large-8 columns bottom-text">
               <h3>Outsource with Supahands!</h3>
               <p>Let us help you propel the growth of your business now, with technology-driven outsourcing and process automation.</p>
           </div>
-          <div class="small-4 small-offset-1 columns button-container">
-              <a href="#" class="button primary">Contact Us Now</a>
+          <div class="small-12 large-4 columns button-container">
+              <a href="#products-section" class="button primary">Contact Us</a>
           </div>
       </div>
+      <!-- Footer Gradient Background -->
       <div class="footer-bg-gradient">
           <svg class="curves" viewBox="0 0 2000 700">
               <path opacity=".4" d="M-500,400 C500,-110 1500,-110 2500,400 L2500,-200 L-500,-200Z" />
@@ -884,6 +859,7 @@
           </svg>
       </div>
   </section>
+  <!-- /// Bottom: END /// -->
   <footer>
       <div class="row">
           <div class="column small-12 medium-3">

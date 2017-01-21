@@ -15,7 +15,7 @@ Index
 **************************************** */
 
 
-/***** Gradient Background  *****/
+/***** Header Gradient Background  *****/
 
 .header-bg-gradient {
     position: absolute;
@@ -123,6 +123,14 @@ Index
     }
 }
 
+// [ Tablet ]
+@media screen and (max-width: 63.9375em) {
+    .usp-section {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+}
+
 // [ Mobile ]
 @media screen and (max-width: 39.9375em) {
     .usp-section {
@@ -131,7 +139,7 @@ Index
 }
 
 
-/***** Middle Section  *****/
+/***** Middle Gradient Background  *****/
 
 .middle-section {
     position: relative;
@@ -288,12 +296,22 @@ Index
     }
 }
 
+// [ Tablet ]
+@media screen and (max-width: 63.9375em) {
+    .before-after-section {
+        padding: 75px 0;
+    }
+    .ba-container {
+        padding-bottom: 75px;
+    }
+}
+
 // [ Mobile ]
 @media screen and (max-width: 39.9375em) {
     .before-after-section {
         color: $white;
         text-align: center;
-        padding: 10% 0;
+        padding: 15% 0;
     }
     // Remove knob on mobile
     .handle:after {
@@ -308,7 +326,7 @@ Index
         }
     }
     .ba-container {
-        padding-bottom: 10%;
+        padding-bottom: 15%;
     }
 }
 
@@ -418,7 +436,7 @@ Index
 // [ Mobile ]
 @media screen and (max-width: 39.9375em) {
     .expertise-section {
-        padding: 5% 3% 10% 3%;
+        padding: 3% 3% 15% 3%;
     }
     .expertise-top {
         padding-top: 60px;
@@ -538,7 +556,7 @@ Index
 }
 
 .business {
-    margin-top: 50px;
+    margin-top: 65px;
     .product-desc h3 {
         color: #E99696;
     }
@@ -588,7 +606,7 @@ Index
 }
 
 .entrepreneur {
-    margin-top: 50px;
+    margin-top: 65px;
     .product-desc h3 {
         color: #92C2FF;
     }
@@ -644,6 +662,8 @@ Index
 // [ Tablet ]
 @media screen and (max-width: 63.9375em) {
     .products-section {
+        padding-top: 75px;
+        padding-bottom: 75px;
         .product-icon {
             margin-top: 0;
         }
@@ -706,7 +726,7 @@ Index
 // [ Mobile ]
 @media screen and (max-width: 39.9375em) {
     .products-section {
-        padding: 10% 0;
+        padding: 15% 0;
         ul {
             font-size: 14px;
             span {
@@ -747,7 +767,7 @@ Index
     .testimonial-container {
         position: relative;
         padding: 0px 20px !important;
-        margin-top: 10px;
+        margin-top: 15px;
     }
     #prev-arrow,
     #next-arrow {
@@ -816,30 +836,31 @@ Index
             line-height: 21px;
         }
     }
-    .dots-container {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        ul {
-            margin: 0;
-        }
-        li {
-            display: inline;
-            list-style: none;
-        }
-        button {
-            width: 0.6rem;
-            height: 0.6rem;
-            padding: 0;
-            margin: 0.3rem;
-            border: 1px solid #d8d8d8;
-            border-radius: 50%;
-            color: transparent;
-            cursor: pointer;
-        }
-        .slick-active button {
-            background-color: #d8d8d8;
-        }
+}
+
+.dots-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    ul {
+        margin: 0;
+    }
+    li {
+        display: inline;
+        list-style: none;
+    }
+    button {
+        width: 0.6rem;
+        height: 0.6rem;
+        padding: 0;
+        margin: 0.3rem;
+        border: 1px solid #d8d8d8;
+        border-radius: 50%;
+        color: transparent;
+        cursor: pointer;
+    }
+    .slick-active button {
+        background-color: #d8d8d8;
     }
 }
 
@@ -851,10 +872,18 @@ Index
     background-color: #E3E3E3;
 }
 
+// [ Tablet ]
+@media screen and (max-width: 63.9375em) {
+    .clients-section {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+}
+
 // [ Mobile ]
 @media screen and (max-width: 39.9375em) {
     .clients-section {
-        padding: 10% 0;
+        padding: 15% 0;
         .card {
             padding: 60px 15px 15px 15px;
             p {
@@ -885,7 +914,7 @@ Index
 // [ Mobile ]
 @media screen and (max-width: 39.9375em) {
     .brands-section {
-        padding-bottom: 10%;
+        padding-bottom: 15%;
     }
 }
 
@@ -901,6 +930,16 @@ Index
     height: 400px;
     color: #ffffff;
 }
+
+// [ Mobile ]
+@media screen and (max-width: 39.9375em) {
+    .cta-section {
+        height: 250px;
+    }
+}
+
+
+/***** Bottom Gradient Background  *****/
 
 .footer-bg-gradient {
     position: absolute;
@@ -919,9 +958,6 @@ Index
 
 // [ Mobile ]
 @media screen and (max-width: 39.9375em) {
-    .cta-section {
-        height: 250px;
-    }
     .footer-bg-gradient {
         min-height: 250px;
         top: -1px;
