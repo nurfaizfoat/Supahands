@@ -172,7 +172,7 @@ function testimonial() {
     $(".testimonial-container").slick({
         slide: '.testimonial',
         dots: false,
-        appendDots: '.dots-container',
+        appendDots: '.dots-container.testimonial-dots',
         arrows: true,
         infinite: true,
         slidesToShow: 2,
