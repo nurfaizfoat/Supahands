@@ -84,7 +84,6 @@ function sass() {
     //.pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
     .pipe($.if(PRODUCTION, $.cssnano()))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-
     .pipe(gulp.dest(PATHS.dist + '/assets/css'))
     .pipe(browser.reload({
       stream: true
