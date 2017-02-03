@@ -344,30 +344,28 @@ Index
 .expertise-top {
     position: relative;
     padding: 40px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
     overflow: visible;
 }
 
-.expertise-bottom {
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
-    position: relative;
-    padding: 20px;
-    margin-top: 3px;
-    z-index: 2;
-    .columns {
-        padding: 0;
-        border-right: 1px solid #E3E3E3;
-    }
-    .columns:last-child {
-        border: none;
-    }
-    h3,
-    p {
-        margin: 0;
-    }
-}
+// .expertise-bottom {
+//     border-top-right-radius: 0;
+//     border-top-left-radius: 0;
+//     position: relative;
+//     padding: 20px;
+//     margin-top: 3px;
+//     z-index: 2;
+//     .columns {
+//         padding: 0;
+//         border-right: 1px solid #E3E3E3;
+//     }
+//     .columns:last-child {
+//         border: none;
+//     }
+//     h3,
+//     p {
+//         margin: 0;
+//     }
+// }
 
 .expertise-nav-container {
     position: absolute;
