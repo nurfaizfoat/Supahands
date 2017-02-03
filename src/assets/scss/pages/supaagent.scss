@@ -288,6 +288,70 @@ SupaAgent
     z-index: -2;
 }
 
+.circle-bg {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    margin: 0 25px 0 -25px;
+    border-radius: 100px;
+    background-color: #F5F6FF;
+    z-index: -1;
+}
+
+#benefit-1,
+#benefit-2,
+#benefit-3 {
+    text-align: right;
+    .benefit-desc {
+        padding: 0 20px 0 0;
+    }
+    .circle-bg {
+        margin: 0 -25px 0 25px;
+    }
+}
+
+#benefit-1 {
+    transform: rotate(225deg) translate(15rem) rotate(-225deg) translate(-310px);
+}
+
+#benefit-2 {
+    transform: translate(-15rem) translate(-310px);
+}
+
+#benefit-3 {
+    transform: rotate(135deg) translate(15rem) rotate(-135deg) translate(-310px);
+}
+
+#benefit-4 {
+    transform: rotate(315deg) translate(15rem) rotate(-315deg) translate(-40px);
+}
+
+#benefit-5 {
+    transform: translate(15em) translate(-40px);
+}
+
+#benefit-6 {
+    transform: rotate(45deg) translate(15em) rotate(-45deg) translate(-40px);
+}
+
+
+/***** Middle Section *****/
+
+.supaagent-page .middle-section:after {
+    position: relative;
+}
+
+.supaagent-page .middle-section:after {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/skyline-bg.png') no-repeat scroll bottom center;
+    background-size: auto 80%;
+    content: '';
+    z-index: -2;
+}
+
 #benefit-1 {
     transform: rotate(225deg) translate(15rem) rotate(-225deg) translate(-310px);
 }
