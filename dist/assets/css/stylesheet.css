@@ -6711,6 +6711,50 @@ SupaAgent
   content: '';
   z-index: -2; }
 
+#benefit-1 {
+  -webkit-transform: rotate(225deg) translate(15rem) rotate(-225deg) translate(-310px);
+      -ms-transform: rotate(225deg) translate(15rem) rotate(-225deg) translate(-310px);
+          transform: rotate(225deg) translate(15rem) rotate(-225deg) translate(-310px); }
+
+#benefit-2 {
+  -webkit-transform: translate(-15rem) translate(-310px);
+      -ms-transform: translate(-15rem) translate(-310px);
+          transform: translate(-15rem) translate(-310px); }
+
+#benefit-3 {
+  -webkit-transform: rotate(135deg) translate(15rem) rotate(-135deg) translate(-310px);
+      -ms-transform: rotate(135deg) translate(15rem) rotate(-135deg) translate(-310px);
+          transform: rotate(135deg) translate(15rem) rotate(-135deg) translate(-310px); }
+
+#benefit-4 {
+  -webkit-transform: rotate(315deg) translate(15rem) rotate(-315deg) translate(-40px);
+      -ms-transform: rotate(315deg) translate(15rem) rotate(-315deg) translate(-40px);
+          transform: rotate(315deg) translate(15rem) rotate(-315deg) translate(-40px); }
+
+#benefit-5 {
+  -webkit-transform: translate(15em) translate(-40px);
+      -ms-transform: translate(15em) translate(-40px);
+          transform: translate(15em) translate(-40px); }
+
+#benefit-6 {
+  -webkit-transform: rotate(45deg) translate(15em) rotate(-45deg) translate(-40px);
+      -ms-transform: rotate(45deg) translate(15em) rotate(-45deg) translate(-40px);
+          transform: rotate(45deg) translate(15em) rotate(-45deg) translate(-40px); }
+
+/***** Middle Section *****/
+.supaagent-page .middle-section:after {
+  position: relative; }
+
+.supaagent-page .middle-section:after {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/skyline-bg.png") no-repeat scroll bottom center;
+  background-size: auto 80%;
+  content: '';
+  z-index: -2; }
+
 /***** Role Section *****/
 .role-section {
   display: -webkit-flex;
