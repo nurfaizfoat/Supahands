@@ -30,16 +30,20 @@ SupaAgent
     height: 100vh;
     width: 100%;
     z-index: 5;
-    >img {
+    img {
         position: absolute;
-        // height: 60vh;
-        max-height: 550px;
+        max-height: 80%;
     }
 }
 
 #sa-female1-after,
 #sa-male {
     display: none;
+}
+
+#sa-female1-frame {
+    margin-top: 30px;
+    margin-left: 0;
 }
 
 #sa-male-frame {
@@ -91,21 +95,156 @@ SupaAgent
     background-color: #A1A9FF;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
     z-index: 2;
-    .diagonal-bg {
-        position: absolute;
-        top: auto;
-        left: 0;
-        width: 100%;
-        height: 120vh;
-        background-color: #ffffff;
-        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
-        transform: skewY(-25deg);
-        z-index: 3;
-    }
     .section-title {
-        position: relative;
+        position: absolute;
         z-index: 4;
+        top: 10px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%)
     }
+    >.row .columns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.diagonal {
+    position: absolute;
+    width: 100%;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
+    z-index: -1;
+}
+
+.diag-top,
+.diag-bottom {
+    width: 100%;
+    height: 650px;
+    svg {
+        width: 100%;
+        height: 100%;
+        fill: #ffffff;
+    }
+}
+
+.diag-mid {
+    width: 100%;
+    height: 250px;
+    background-color: #ffffff;
+}
+
+.ring-path {
+    position: relative;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 15rem;
+    z-index: 3;
+}
+
+.benefit-container {
+    position: absolute;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    margin-top: -62px;
+    width: 350px;
+    height: 124px;
+}
+
+.benefit-desc {
+    padding: 0 0 0 20px;
+    h4 {
+        color: #64699F;
+        margin: 0;
+    }
+    p {
+        margin: 0;
+    }
+}
+
+.benefit-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    min-width: 70px;
+    height: 70px;
+    background-color: #A1A9FF;
+    border-radius: 50%;
+    box-shadow: inset 8px -8px 0 rgba(0, 0, 0, .1), inset 0 60px 50px -30px #A1A9FF;
+    svg {
+        width: 60%;
+        height: 60%;
+        fill: #ffffff;
+    }
+}
+
+.circle-bg {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    margin: 0 25px 0 -25px;
+    border-radius: 100px;
+    background-color: #F5F6FF;
+    z-index: -1;
+}
+
+#benefit-1,
+#benefit-2,
+#benefit-3 {
+    text-align: right;
+    .benefit-desc {
+        padding: 0 20px 0 0;
+    }
+    .circle-bg {
+        margin: 0 -25px 0 25px;
+    }
+}
+
+#benefit-1 {
+    transform: rotate(225deg) translate(15rem) rotate(-225deg) translate(-310px);
+}
+
+#benefit-2 {
+    transform: translate(-15rem) translate(-310px);
+}
+
+#benefit-3 {
+    transform: rotate(135deg) translate(15rem) rotate(-135deg) translate(-310px);
+}
+
+#benefit-4 {
+    transform: rotate(315deg) translate(15rem) rotate(-315deg) translate(-40px);
+}
+
+#benefit-5 {
+    transform: translate(15em) translate(-40px);
+}
+
+#benefit-6 {
+    transform: rotate(45deg) translate(15em) rotate(-45deg) translate(-40px);
+}
+
+
+/***** Middle Section *****/
+
+.supaagent-page .middle-section:after {
+    position: relative;
+}
+
+.supaagent-page .middle-section:after {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/skyline-bg.png') no-repeat scroll bottom center;
+    background-size: auto 80%;
+    content: '';
+    z-index: -2;
 }
 
 
@@ -114,7 +253,7 @@ SupaAgent
 .role-section {
     display: flex;
     align-items: center;
-    height: 100vh;
+    height: 130vh;
     text-align: justify;
     .section-title {
         align-items: flex-start;
@@ -128,10 +267,10 @@ SupaAgent
 /***** Tasks Section *****/
 
 .supaagent-page .tasks-section {
-    padding-top: 75px;
-    padding-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     width: 100%;
-    min-height: 100vh;
+    min-height: 130vh;
     p {
         margin-top: 15px;
     }
@@ -145,27 +284,37 @@ SupaAgent
 
 .accesscard {
     margin-top: 45px;
+    img {
+        border-radius: 5%;
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+    }
 }
 
 #new-accesscard {
     position: absolute;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
+    top: -105%;
     width: 100%;
-    z-index: 2;
+    z-index: 3;
+    img {
+        border-radius: 5%;
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+    }
 }
 
 .tasks-section .task-types {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-flow: row nowrap;
     margin-top: 50px;
     padding: 25px;
     width: 100%;
     color: #ffffff;
     background-color: #93CC91;
+    z-index: 2;
     h5 {
         padding: 0;
         margin: 0;
@@ -182,49 +331,114 @@ SupaAgent
 /***** Demography Section *****/
 
 .demography-section {
-    padding: 0;
-    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    height: 100vh;
+    .diag-mid {
+        height: 400px;
+    }
+    .scene-background,
     .scene-foreground {
         position: absolute;
-        height: auto;
-        max-width: 615px;
+        width: 100%;
+        height: 100%;
+    }
+    .scene-foreground {
+        z-index: 6;
+    }
+    .scene-bg,
+    .scene-fg {
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .slick-list,
+    .slick-track {
+        height: 100%;
+    }
+    #prev-arrow,
+    #next-arrow {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 20px;
+        padding-top: 40px;
+        fill: #ffffff;
+        z-index: 99;
+        cursor: pointer;
+        &:hover {
+            fill: #75758F;
+        }
+    }
+    #prev-arrow {
+        left: 20px;
+    }
+    #next-arrow {
+        right: 20px;
+    }
+    .avatar {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
         z-index: 5;
+        img {
+            position: absolute;
+            max-height: 80%;
+        }
     }
 }
-// .demography-section {
-//     position: relative;
-//     display: flex;
-//     justify-content: center;
-//     background-color: #A1A9FF;
-    // height: 100vh;
-    // .slide-background {
-    //     position: absolute;
-    //     bottom: 0;
-    //     width: 100%;
-    //     height: 100%;
-// }
 
-// .slide-foreground {
-//     z-index: 5;
-//     img {
-//         max-width: 615px;
-//     }
-// }
-
-// .slide-background {
-//     border: 1px solid red;
-//     width: 100%;
-//     z-index: 2;
-//     img {
-//         position: absolute;
-//         bottom: 0;
-//         object-fit: contain;
-//     }
-// }
 
 /***** CTA Section *****/
 
 .supaagent-page .cta-section {
-    height: 100vh;
+    position: relative;
+    padding: 100px 8%;
+    height: auto;
+    .illustration-container {
+        display: flex;
+        justify-content: center;
+        flex-flow: row nowrap;
+        margin-left: -70px;
+    }
+    .sh-left {
+        margin-right: 20px;
+        z-index: 5;
+    }
+    .card {
+        position: relative;
+        margin-top: -80px;
+        padding: 30px;
+        background-color: #7777B8;
+        z-index: 6;
+    }
+    p {
+        margin: 0;
+    }
+    .button-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .button {
+        width: 70%;
+    }
+}
+
+.supaagent-page .cta-section:after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/seamless-pattern.png');
+    background-repeat: repeat;
+    background-size: 15% auto;
+    content: '';
+    z-index: -3;
 }
