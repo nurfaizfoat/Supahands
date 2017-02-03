@@ -1,10 +1,21 @@
 <!-- Avatar -->
-<div class="avatar" id="sa-female1-frame">
-    <img id="sa-female1-before" src="{{root}}assets/img/supaagent-female.png">
-    <img id="sa-female1-after" src="{{root}}assets/img/supaagent-female-casual.png">
+<div class="avatar-container">
+    <div class="avatar" id="sa-female1-frame">
+        <img id="sa-female1-before" src="{{root}}assets/img/supaagent-female.png">
+        <img id="sa-female1-after" src="{{root}}assets/img/supaagent-female-casual.png">
+    </div>
+    <div class="avatar" id="sa-male-frame">
+        <img id="sa-male" src="{{root}}assets/img/supaagent-male.png">
+    </div>
 </div>
-<div class="avatar" id="sa-male-frame">
-    <img id="sa-male" src="{{root}}assets/img/supaagent-male.png">
+<!-- ScrollNav -->
+<div class="scrollnav-container">
+    <div class="scrollnav-button" data-active></div>
+    <div class="scrollnav-button"></div>
+    <div class="scrollnav-button"></div>
+    <div class="scrollnav-button"></div>
+    <div class="scrollnav-button"></div>
+    <div class="scrollnav-button"></div>
 </div>
 <!-- Header Section -->
 <section class="header-section">
@@ -144,7 +155,7 @@
             </div>
             <div class="small-4 small-offset-4 columns" id="new-accesscard">
                 <img src="{{root}}assets/img/access-card-0.png">
-                <div class="blank-bg"></div>
+                <a class="button secondary" data-open="tasks-modal">View Example Tasks</a>
             </div>
             <div class="small-4 columns accesscard">
                 <img src="{{root}}assets/img/access-card-2.png">
@@ -205,10 +216,15 @@
             <img src="{{root}}assets/img/demographyfg-kitchen.png">
         </div>
     </div>
-    <!-- Avatar -->
     <div class="avatar" id="sa-female2-frame">
         <img id="sa-female2-before" src="{{root}}assets/img/supaagent-female-casual2.png">
-        <!--<img id="sa-female2-after" src="{{root}}assets/img/supaagent-female.png">-->
+        <img id="sa-female2-after" src="{{root}}assets/img/supaagent-female.png">
+    </div>
+    <div class="description-container card">
+        {{> sectiontitle iconID='fist' titletext='ZERO DISCRIMINATION'}}
+        <p>We are a diverse company that welcomes everyone regardless of age, experience or background. Our SupaAgents consist
+            of working professionals, students, stay-at-home parents, retirees... We could go on. So why don't you join us
+            and meet them for yourself?</p>
     </div>
 </section>
 <!-- CTA Section -->
