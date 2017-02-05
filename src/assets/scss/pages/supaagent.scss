@@ -56,6 +56,18 @@ SupaAgent
     display: none;
 }
 
+// [ Tablet ]
+@media screen and (max-width: 63.9375em) {
+    .avatar {
+        align-items: flex-end;
+        top: auto;
+        bottom: 3vw;
+        img {
+            max-height: 50%;
+        }
+    }
+}
+
 
 /***** ScrollNav *****/
 
@@ -114,11 +126,33 @@ SupaAgent
     }
     .button.primary {
         width: auto;
-        min-width: 150px;
+        min-width: 175px;
     }
     .button.secondary {
         @include btn-color(#A1A9FF);
         min-width: 200px;
+    }
+}
+
+// [ Tablet ]
+@media screen and (max-width: 63.9375em) {
+    .supaagent-page .header-section {
+        padding: 0;
+        text-align: center;
+        .row .columns {
+            height: 100%;
+            padding-top: 80px;
+        }
+        p {
+            text-align: center;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+        .button {
+            flex-grow: 0;
+        }
     }
 }
 
@@ -142,7 +176,7 @@ SupaAgent
         top: 10px;
         left: 50%;
         -webkit-transform: translateX(-50%);
-        transform: translateX(-50%)
+        transform: translateX(-50%);
     }
     >.row .columns {
         display: flex;
@@ -270,6 +304,58 @@ SupaAgent
     transform: rotate(45deg) translate(15em) rotate(-45deg) translate(-40px);
 }
 
+// [ Tablet ]
+@media screen and (max-width: 63.9375em) {
+    .benefits-section {
+        padding: 50px 0;
+        height: 160vh;
+        .section-title {
+            position: absolute;
+            top: 50px;
+        }
+        >.row .columns {
+            justify-content: flex-start;
+        }
+    }
+    .diag-top,
+    .diag-bottom {
+        height: 150px;
+    }
+    .diag-mid {
+        height: 850px;
+    }
+    .hide-for-large {
+        align-self: flex-start;
+        padding-top: 100px;
+    }
+    .benefit-container {
+        position: relative;
+        flex-flow: column nowrap;
+        left: auto;
+        margin: 0;
+        padding: 0;
+        height: 220px;
+        text-align: center;
+    }
+    .benefit-icon {
+        margin: 15px;
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+    }
+    .benefit-desc {
+        padding: 0;
+    }
+    #benefit-1,
+    #benefit-2,
+    #benefit-3,
+    #benefit-4,
+    #benefit-5,
+    #benefit-6 {
+        transform: none;
+    }
+}
+
 
 /***** Middle Section *****/
 
@@ -301,6 +387,19 @@ SupaAgent
     }
     p {
         margin-top: 15px;
+    }
+}
+
+// [ Tablet ]
+@media screen and (max-width: 63.9375em) {
+    .role-section {
+        align-items: flex-start;
+        padding: 50px;
+        height: 100vh;
+        text-align: center;
+        .section-title {
+            align-items: center;
+        }
     }
 }
 
@@ -343,13 +442,6 @@ SupaAgent
         border-radius: 5%;
         box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
     }
-    .button.secondary {
-        position: absolute;
-        display: none;
-        top: -20px;
-        right: -20px;
-        @include btn-color(#93CC91);
-    }
 }
 
 .tasks-section .task-types {
@@ -372,6 +464,15 @@ SupaAgent
         padding: 1px;
         background-color: #ffffff;
         opacity: 0.5;
+    }
+}
+
+// [ Tablet ]
+@media screen and (max-width: 63.9375em) {
+    .tasks-section .task-types {
+        h5 {
+            font-size: 14px;
+        }
     }
 }
 
@@ -449,6 +550,38 @@ SupaAgent
     }
 }
 
+// [ Tablet ]
+@media screen and (max-width: 63.9375em) {
+    .demography-section {
+        .diag-mid {
+            height: 500px;
+        }
+        .scene-background,
+        .scene-foreground {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .scene-foreground {
+            z-index: 6;
+        }
+        .scene-bg,
+        .scene-fg {
+            img {
+                height: 80%;
+                object-fit: cover;
+            }
+        }
+        #sa-female2-frame {
+            margin-top: -300px;
+        }
+        .description-container {
+            left: 0;
+            width: 100%;
+        }
+    }
+}
+
 
 /***** CTA Section *****/
 
@@ -496,4 +629,41 @@ SupaAgent
     background-size: 15% auto;
     content: '';
     z-index: -3;
+}
+
+// [ Tablet ]
+@media screen and (max-width: 63.9375em) {
+    .supaagent-page .cta-section {
+        padding: 75px 8%;
+        .illustration-container {
+            margin-left: -30px;
+        }
+        .sh-left,
+        .sh-right {
+            height: 65%;
+            max-height: 65%;
+            object-fit: contain;
+        }
+        .sh-left {
+            right: 0;
+            max-width: 200px;
+        }
+        .sh-right {
+            max-width: 150px;
+        }
+        .card {
+            margin-top: -220px;
+            text-align: center;
+        }
+        p {
+            margin: 0;
+        }
+        .button-container {
+            justify-content: center;
+            margin-top: 15px;
+        }
+        #sa-female2-frame {
+            top: -250px;
+        }
+    }
 }
