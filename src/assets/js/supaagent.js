@@ -25,14 +25,21 @@ function demographySlider() {
     $(".scene-background").slick({
         slide: '.scene-bg',
         dots: false,
-        appendDots: '.dots-container.testimonial-dots',
         arrows: true,
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         prevArrow: '<svg id="prev-arrow"><use xlink:href="#icon-angle-left" /></svg>',
         nextArrow: '<svg id="next-arrow"><use xlink:href="#icon-angle-right" /></svg>',
-        asNavFor: '.scene-foreground'
+        asNavFor: '.scene-foreground',
+        responsive: [{
+            breakpoint: 640,
+            settings: {
+                arrows: false,
+                dots: true,
+                appendDots: '.dots-container.demography-dots',
+            }
+        }]
     });
 
     $(".scene-foreground").slick({
