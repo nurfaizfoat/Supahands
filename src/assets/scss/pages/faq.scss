@@ -1,0 +1,124 @@
+/* ****************************************
+Business
+**************************************** */
+
+
+/***** Header Gradient Background  *****/
+
+.faq-page .header-bg-gradient {
+    height: 27rem;
+    overflow: hidden;
+    .icon-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30rem;
+        z-index: 1;
+        .icon {
+            position: absolute;
+            top: 7rem;
+        }
+    }
+}
+
+// [ Tablet ]
+@media screen and (max-width: 63.9375em) {
+    .faq-page .header-bg-gradient {
+        height: 31rem;
+        overflow: visible;
+        .icon-container {
+            height: 34rem;
+            .icon {
+                top: auto;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                max-height: 220px;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+// [ Mobile ]
+@media screen and (max-width: 39.9375em) {
+    .faq-page .header-bg-gradient {
+        .icon-container .icon {
+            left: 0;
+            right: 0;
+            width: 100%;
+            max-height: 150px;
+            object-fit: contain;
+        }
+    }
+}
+
+
+/***** Header Section  *****/
+
+.faq-page .header-section {
+    height: 21.5rem;
+    .text-container {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+}
+
+// [ Tablet ]
+@media screen and (max-width: 63.9375em) {
+    .faq-page .header-section {
+        height: 25rem;
+        .row {
+            align-items: flex-start;
+            padding-top: 3rem;
+        }
+        .text-container {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            text-align: center;
+        }
+    }
+}
+
+// [ Mobile ]
+@media screen and (max-width: 39.9375em) {
+    .faq-page .header-section {
+        height: 25rem;
+        .row {
+            align-items: flex-start;
+            padding-top: 0.5rem;
+        }
+    }
+}
+
+
+/***** FAQ Section  *****/
+
+.spacer {
+    height: 200vh;
+    width: 100%;
+}
+
+.faq-nav {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: 100vh;
+    ul {
+        list-style: none;
+        text-align: right;
+    }
+    li {
+        padding: 10px;
+        color: #9287bf;
+    }
+    li:hover {
+        opacity: 0.7;
+        cursor: pointer;
+    }
+    li[data-active] {
+        color: #68689F;
+    }
+}
