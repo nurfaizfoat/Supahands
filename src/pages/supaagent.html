@@ -6,11 +6,11 @@ ogDescription: Offload business tasks or operational processes like lead generat
 ---
 <!-- Avatar -->
 <div class="avatar-container">
-    <div class="avatar" id="sa-female1-frame">
+    <div class="avatar hide-for-small-only" id="sa-female1-frame">
         <img id="sa-female1-before" src="{{root}}assets/img/supaagent-female.png">
         <img id="sa-female1-after" src="{{root}}assets/img/supaagent-female-casual.png">
     </div>
-    <div class="avatar" id="sa-male-frame">
+    <div class="avatar hide-for-small-only" id="sa-male-frame">
         <img id="sa-male" src="{{root}}assets/img/supaagent-male.png">
     </div>
 </div>
@@ -33,6 +33,9 @@ ogDescription: Offload business tasks or operational processes like lead generat
             <div class="button-container">
                 <a href="#" class="button primary">Apply Now!</a>
                 <a href="#" class="button secondary">Check Application Status</a>
+            </div>
+            <div class="avatar-mobile show-for-small-only">
+                <img src="{{root}}assets/img/supaagent-female.png">
             </div>
         </div>
     </div>
@@ -134,7 +137,7 @@ ogDescription: Offload business tasks or operational processes like lead generat
     </div>
     <div class="row hide-for-large">
         {{> sectiontitle iconID='fist' titletext='WHAT YOU\'LL LOVE'}}
-        <div class="small-4 columns benefit-container">
+        <div class="small-6 medium-4 columns benefit-container">
             <div class="benefit-icon">
                 <svg>
                     <use xlink:href="#icon-coverage" />
@@ -145,7 +148,7 @@ ogDescription: Offload business tasks or operational processes like lead generat
                 <p>Earn as much income as you want by completing more tasks. Happy clients means more tasks sent in!</p>
             </div>
         </div>
-        <div class="small-4 columns benefit-container">
+        <div class="small-6 medium-4 columns benefit-container">
             <div class="benefit-icon">
                 <svg>
                     <use xlink:href="#icon-coverage" />
@@ -158,7 +161,7 @@ ogDescription: Offload business tasks or operational processes like lead generat
                 </p>
             </div>
         </div>
-        <div class="small-4 columns benefit-container">
+        <div class="small-6 medium-4 columns benefit-container">
             <div class="benefit-icon">
                 <svg>
                     <use xlink:href="#icon-coverage" />
@@ -169,7 +172,7 @@ ogDescription: Offload business tasks or operational processes like lead generat
                 <p>Supahands loves high performers. Wow us with your skills and you'll be rewarded.</p>
             </div>
         </div>
-        <div class="small-4 columns benefit-container">
+        <div class="small-6 medium-4 columns benefit-container">
             <div class="benefit-icon">
                 <svg>
                     <use xlink:href="#icon-tweezer" />
@@ -180,7 +183,7 @@ ogDescription: Offload business tasks or operational processes like lead generat
                 <p>Not a morning person? Start your day at any time you want.</p>
             </div>
         </div>
-        <div class="small-4 columns benefit-container">
+        <div class="small-6 medium-4 columns benefit-container">
             <div class="benefit-icon">
                 <svg>
                     <use xlink:href="#icon-tweezer" />
@@ -191,7 +194,7 @@ ogDescription: Offload business tasks or operational processes like lead generat
                 <p>Discover new skills that you never thought you had.</p>
             </div>
         </div>
-        <div class="small-4 columns benefit-container">
+        <div class="small-6 medium-4 columns benefit-container">
             <div class="benefit-icon">
                 <svg>
                     <use xlink:href="#icon-tweezer" />
@@ -200,6 +203,11 @@ ogDescription: Offload business tasks or operational processes like lead generat
             <div class="benefit-desc">
                 <h4>Meet SupaAwesome People</h4>
                 <p>You could be helping the next big tech entrepreneur take his or her company to new heights.</p>
+            </div>
+        </div>
+        <div class="small-12 columns">
+            <div class="avatar-mobile show-for-small-only">
+                <img src="{{root}}assets/img/supaagent-female-casual.png">
             </div>
         </div>
     </div>
@@ -215,25 +223,30 @@ ogDescription: Offload business tasks or operational processes like lead generat
                     company in Singapore. <span style="display: inline-block;">Your role -</span> help them grow by taking
                     care of tedious tasks so they can focus on their next step. You could be a part of something big!</p>
             </div>
+            <div class="small-12 columns">
+                <div class="avatar-mobile show-for-small-only">
+                    <img src="{{root}}assets/img/supaagent-male.png">
+                </div>
+            </div>
         </div>
     </section>
     <!-- Tasks Section -->
     <section class="tasks-section">
         <div class="row">
-            <div class="small-10 small-offset-1 columns">
+            <div class="small-12 medium-10 medium-offset-1 columns">
                 {{> sectiontitle invert="invert" iconID='fist' titletext='WHAT YOU\'LL DO'}}
                 <p class="text-white text-center">Our clients need our help! And you won't be alone. Work with a team of other SupaAgents and Project Managers
                     by taking care of the nature of tasks below.</p>
             </div>
         </div>
         <div class="row accesscard-container">
-            <div class="small-4 small-offset-2 columns accesscard">
+            <div class="small-6 medium-4 medium-offset-2 columns accesscard">
                 <img src="{{root}}assets/img/access-card-1.png">
             </div>
-            <div class="small-4 small-offset-4 columns" id="new-accesscard">
+            <div class="small-6 small-offset-3 medium-4 medium-offset-4 columns" id="new-accesscard">
                 <img src="{{root}}assets/img/access-card-0.png">
             </div>
-            <div class="small-4 columns accesscard">
+            <div class="small-6 medium-4 columns accesscard">
                 <img src="{{root}}assets/img/access-card-2.png">
             </div>
         </div>
@@ -292,20 +305,37 @@ ogDescription: Offload business tasks or operational processes like lead generat
             <img src="{{root}}assets/img/demographyfg-kitchen.png">
         </div>
     </div>
-    <div class="avatar" id="sa-female2-frame">
+    <div class="dots-container demography-dots"></div>
+    <div class="avatar hide-for-small-only" id="sa-female2-frame">
         <img id="sa-female2-before" src="{{root}}assets/img/supaagent-female-casual2.png">
         <img id="sa-female2-after" src="{{root}}assets/img/supaagent-female.png">
     </div>
-    <div class="description-container card">
+    <div class="avatar-mobile show-for-small-only">
+        <img src="{{root}}assets/img/supaagent-female-casual2.png">
+    </div>
+    <div class="description-container card hide-for-small-only">
         {{> sectiontitle iconID='fist' titletext='ZERO DISCRIMINATION'}}
         <p>We are a diverse company that welcomes everyone regardless of age, experience or background. Our SupaAgents consist
             of working professionals, students, stay-at-home parents, retirees... We could go on. So why don't you join us
             and meet them for yourself?</p>
     </div>
 </section>
+<section class="description-container show-for-small-only">
+    <div class="row">
+        <div class="small-12 columns">
+            {{> sectiontitle iconID='fist' titletext='ZERO DISCRIMINATION'}}
+            <p>We are a diverse company that welcomes everyone regardless of age, experience or background. Our SupaAgents consist
+                of working professionals, students, stay-at-home parents, retirees... We could go on. So why don't you join
+                us and meet them for yourself?</p>
+        </div>
+    </div>
+</section>
 <!-- CTA Section -->
 <section class="cta-section">
     <div class="row">
+        <div class="avatar-mobile show-for-small-only">
+            <img src="{{root}}assets/img/supaagent-female.png">
+        </div>
         <div class="small-12 columns illustration-container">
             <img class="supaheroes-altogether sh-left" src="{{root}}assets/img/supaheroes-altogether-left.png">
             <img class="supaheroes-altogether sh-right" src="{{root}}assets/img/supaheroes-altogether-right.png">
