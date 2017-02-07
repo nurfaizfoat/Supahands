@@ -111,7 +111,7 @@ Business
     .venn {
         height: 100%;
     }
-    .description-container {
+    .venn-description-container {
         display: flex;
         flex-flow: column nowrap;
         justify-content: flex-start;
@@ -149,7 +149,7 @@ Business
         .venn {
             height: 200px;
         }
-        .description-container {
+        .venn-description-container {
             padding: 30px 15px;
         }
         .description {
